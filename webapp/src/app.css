@@ -1,0 +1,44 @@
+/* Import Tailwind's base, components, and utilities */
+@import "tailwindcss";
+
+/* Tailwind v4 theme configuration */
+@theme {
+  --color-helpo-purple: #343877;
+  --color-helpo-yellow: #efc940;
+  --color-helpo-light-gray: #f9f7f6;
+  --color-helpo-dark: #20212b;
+  --color-helpo-gray-text: #777;
+  --color-helpo-heading: #4a4c70;
+  
+  --font-quicksand: Quicksand, sans-serif, ui-sans-serif, system-ui;
+  --font-storytella: Storytella, cursive;
+}
+
+/* 
+  Define your custom fonts here. 
+  You will need to download these font files and place them in your `static/fonts` directory.
+*/
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/fonts/quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
+	font-weight: 300 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Storytella';
+	src: url('/fonts/storytella/storytella.woff') format('woff'); /* Add other formats if you have them */
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Apply the default font to the body */
+body {
+	@apply font-quicksand text-helpo-gray-text antialiased;
+}
+
+/* Apply specific styles for the custom headings */
+h1, h3, h4, h5, h6 {
+    @apply text-helpo-heading font-bold tracking-tight;
+}

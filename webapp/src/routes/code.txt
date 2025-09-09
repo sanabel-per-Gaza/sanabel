@@ -1,0 +1,36 @@
+<!-- src/routes/+page.svelte -->
+<script lang="ts">
+	import Hero from '$lib/blocks/Hero.svelte';
+	import AboutStats from '$lib/blocks/AboutStats.svelte';
+	import WhatWeDo from '$lib/blocks/WhatWeDo.svelte';
+	import FeaturedCauses from '$lib/blocks/FeaturedCauses.svelte';
+	import ProjectsGrid from '$lib/blocks/ProjectsGrid.svelte';
+	import SponsorCTA from '$lib/blocks/SponsorCTA.svelte';
+	import EventsSection from '$lib/blocks/EventsSection.svelte';
+	import Testimonials from '$lib/blocks/Testimonials.svelte';
+
+	// You would import any other blocks you create here
+	// e.g., import ActionSection from '$lib/blocks/ActionSection.svelte';
+	// e.g., import Donors from '$lib/blocks/Donors.svelte';
+</script>
+
+<svelte:head>
+	<title>Sanabel - Charity Association</title>
+	<meta name="description" content="Sanabel is a charity association helping people in need around the world." />
+</svelte:head>
+
+<!-- 
+  Each block component is now self-contained and placed in order.
+  The layout file will automatically wrap this content with the Header and Footer.
+-->
+<Hero />
+<AboutStats />
+<WhatWeDo />
+<!-- An Action Section was in the original HTML, you can create and place it here -->
+<!-- <ActionSection /> -->
+<FeaturedCauses />
+<ProjectsGrid />
+<SponsorCTA />
+<EventsSection />
+<Testimonials />
+<!-- The final 'Donors' and image section would go here -->
