@@ -2,29 +2,29 @@
 	import '../app.css';
 	import Header from '$lib/blocks/Header.svelte';
 	import Footer from '$lib/blocks/Footer.svelte';
+	import Modal from '$lib/components/modal/Modal.svelte';
+	import Content from '$lib/components/modal/Content.svelte';
+	import Trigger from '$lib/components/modal/Trigger.svelte';
+  import { Donation } from '$lib/components/modal/Modals';
 
 	let isAsideOpen = false;
 	const toggleAside = () => (isAsideOpen = !isAsideOpen);
 	const closeAside = () => (isAsideOpen = false);
 
 </script>
+ <Modal modalId={Donation}>
+	<Content>
+		<div class="gfm-embed" data-url="https://www.gofundme.com/f/sanabel-per-le-persone-con-disabilita-e-neurodivergentigaza/widget/large?sharesheet=undefined&attribution_id=sl:3a71cd7d-5e38-45e9-a2bf-1abf1cbb24da"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+	</Content>
+	<div class="flex flex-col min-h-screen bg-white">
+		<Header on:toggleAside={toggleAside} />
+			<main class="main">
+				<slot />
+			</main>
+		<Footer />
+	</div>
+</Modal>
 
-<div class="flex flex-col min-h-screen bg-white">
-	
-	<!-- 
-		The Header component receives the 'toggleAside' function as a prop.
-		This is a clean way to allow a child component to control state in its parent layout.
-	-->
-	<Header on:toggleAside={toggleAside} />
-	
-	<!-- Main content of each page will be injected here -->
-	<main class="main">
-		<slot />
-	</main>
-	
-	<Footer />
-
-</div>
 
 <!-- Aside (Mobile) Menu Overlay -->
 {#if isAsideOpen}
