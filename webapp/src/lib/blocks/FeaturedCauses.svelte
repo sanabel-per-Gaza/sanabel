@@ -5,11 +5,11 @@
 	import CauseCard from '$lib/components/cards/CauseCard.svelte';
 </script>
 
-<section class="section bg-helpo-light-gray relative overflow-hidden">
+<section class="section bg-helpo-light-gray relative overflow-hidden py-8">
 	<img class="absolute bottom-0 right-0 hidden lg:block" src="img/causes_img.png" alt="background decoration" />
 	<div class="container mx-auto">
-		<div class="row mb-8">
-			<div class="col-lg-4">
+		<div class="flex flex-row mb-8 items-start">
+			<div class="min-w-sm">
 				<SectionHeader preTitle="What we Do" mainTitle="<span>Helpo</span> <span>Causes</span>" />
 			</div>
 			<div class="col-lg-8 flex flex-col justify-end">
@@ -17,6 +17,9 @@
 					Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento
 					splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish.
 				</p>
+				<div class="mt-8">
+					<Button variant="reverted" href="#">More Causes</Button>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -52,7 +55,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 text-center mt-8">
-				<Button href="#">More Causes</Button>
+				<Button variant="reverted" href="#">More Causes</Button>
 			</div>
 		</div>
 	</div>

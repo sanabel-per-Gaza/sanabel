@@ -5,7 +5,7 @@
 	import EventCard from '$lib/components/cards/EventCard.svelte';
 </script>
 
-<section class="section relative">
+<section class="section relative  py-8">
 	<img class="absolute left-0 bottom-0 -z-10 hidden lg:block" src="img/events_bg.png" alt="background decoration" />
 	<div class="container mx-auto">
 		<div class="row mb-12">
@@ -21,7 +21,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="flex flex-row space-x-8">
 			<div class="col-md-6 col-lg-4">
 				<EventCard
 					imageUrl="img/event_1.jpg"
@@ -52,7 +52,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 text-center">
-				<Button href="#">View All Events</Button>
+				<Button variant="reverted" href="#">View All Events</Button>
 			</div>
 		</div>
 	</div>

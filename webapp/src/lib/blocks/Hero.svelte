@@ -28,9 +28,9 @@
 			<div class="row">
 				<div class="col-xl-7">
 					<div class="flex flex-col gap-6">
-						<h2 class="text-5xl lg:text-7xl font-bold text-white">
+						<div class="text-5xl lg:text-7xl font-bold text-white">
 							Our Helping <br /><span class="font-light">around the world.</span>
-						</h2>
+						</div>
 						<p class="max-w-xl">
 							Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish
 							shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish

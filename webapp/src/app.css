@@ -39,6 +39,6 @@ body {
 }
 
 /* Apply specific styles for the custom headings */
-h1, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     @apply text-helpo-heading font-bold tracking-tight;
 }

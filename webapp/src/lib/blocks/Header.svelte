@@ -28,13 +28,13 @@
 				<div class="hidden sm:flex">
 					<Button variant="squared" href="#">Donate</Button>
 				</div>
-				<div class="lg:hidden ml-4">
+				<!-- <div class="lg:hidden ml-4">
 					<button on:click={() => dispatch('toggleAside')} class="hamburger hamburger--3dx" type="button" aria-label="Open menu">
 						<span class="hamburger-box">
 							<span class="hamburger-inner bg-helpo-purple before:bg-helpo-purple after:bg-helpo-purple"></span>
 						</span>
 					</button>
-				</div>
+				</div> -->
 			</div>
 
 		</div>

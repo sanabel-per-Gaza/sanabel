@@ -4,47 +4,41 @@
 	import SectionHeader from '$lib/components/ui/SectionHeader.svelte';
 </script>
 
-<section class="section bg-helpo-light-gray">
+<section class="section bg-helpo-light-gray py-8">
 	<div class="container mx-auto">
-		<div class="row items-center">
-			<div class="col-xl-4 mb-8 xl:mb-0">
+		<div class="flex flex-row items-center space-x-2 items-start ">
+			<div class="flex flex-col mb-8 xl:mb-0 min-w-[400px] pt-8">
 				<SectionHeader preTitle="About Us" mainTitle="<span>Help is Our</span> <span>Main Goal Ever</span>" />
-				<div class="hidden xl:block mt-8">
-					<Button href="#">More About</Button>
+				<div class="xl:block mt-8">
+					<Button variant="reverted" href="#">More About</Button>
 				</div>
 			</div>
-			<div class="col-xl-8">
+			<div class="flex flex-col py-8">
 				<p>
 					<strong
-						>Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike
-						zebra danio king-of-the-salmon banjo catfish.</strong
+						>Sanabel è un progetto di amicizia e sostegno alle persone con disabilità fisiche, sensoriali, intellettive e alle bambine e bambini con autismo e altre neurodivergenze nella Striscia di Gaza.</strong
 					>
 				</p>
 				<p>
-					Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish
-					velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling
-					trout-perch
+					Le sanabel (سنبلة, sunbula, “spiga di grano”) sono forti e flessibili e crescono meglio quando si sostengono a vicenda. 
 				</p>
 				<p>
-					Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento
-					splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish
-					basslet. Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish,
-					catla wolffish, mosshead warbonnet grouper darter wels catfish mud catfish.
+					Il progetto nasce tra due sponde dello stesso mare, dalla collaborazione tra l’Unione Generale Palestinese delle Persone con Disabilità, il Centro Irada per l’Educazione Inclusiva di Gaza, e gruppi di educatrici, psicologhe, operatrici nel campo delle disabilità e delle neurodivergenze, ricercatrici universitarie, insegnanti, studentesse e solidali in tutta Italia. Oggi, da quel lato del mare, le condizioni di vita sono diventate ancora più complesse per chi vive con una disabilità o una neurodivergenza. Gli strumenti di assistenza e le reti di supporto sono frammentate. I bambini e le bambine con autismo, in particolare, faticano a ritrovare sicurezza, routine e stabilità. Sanabel tende una mano per:
 				</p>
-				<div class="row mt-12">
-					<div class="col-md-4 text-center md:text-left mb-8 md:mb-0">
+				<div class="flex flex-row mt-12 justify-between">
+					<div class="flex-1 text-center mb-8 md:mb-0">
 						<h6 class="text-sm font-bold text-helpo-heading mb-2">People We Helped on 2018</h6>
 						<div class="text-6xl font-bold text-helpo-purple">
 							200<span class="text-4xl">k</span>
 						</div>
 					</div>
-					<div class="col-md-4 text-center md:text-left mb-8 md:mb-0">
+					<div class="flex-1 text-center mb-8 md:mb-0">
 						<h6 class="text-sm font-bold text-helpo-heading mb-2">Dollars We Collected</h6>
 						<div class="text-6xl font-bold text-helpo-purple">
 							65<span class="text-4xl">bil</span>
 						</div>
 					</div>
-					<div class="col-md-4 text-center md:text-left">
+					<div class="flex-1 text-center">
 						<h6 class="text-sm font-bold text-helpo-heading mb-2">Closed Projects</h6>
 						<div class="text-6xl font-bold text-helpo-purple">
 							100<span class="text-4xl">+</span>
@@ -52,9 +46,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 text-center xl:hidden mt-8">
+			<!-- <div class="col-12 text-center xl:hidden mt-8">
 				<Button href="#">More About</Button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>

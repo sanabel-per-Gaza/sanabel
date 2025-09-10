@@ -5,17 +5,15 @@
 </script>
 
 <section class="section">
-	<div class="container mx-auto">
-		<div class="row mb-12">
-			<div class="col-12">
+	<div class="container mx-auto py-8">
+		<div class="mb-12">
 				<SectionHeader
 					preTitle="What We do"
 					mainTitle="<span>We do it</span> <span>for all people</span>"
-					center={true}
+					center
 				/>
-			</div>
 		</div>
-		<div class="row">
+		<div class="flex justify-between space-x-16">
 			<div class="col-sm-6 col-lg-3">
 				<ServiceCard
 					iconSrc="img/svg/icons_2/1_blood.svg"
