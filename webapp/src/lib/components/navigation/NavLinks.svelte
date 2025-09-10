@@ -9,11 +9,12 @@
 
 	// Mock data for the navigation links. In a real app, this would come from a data source.
 	const links: Link[] = [
-		{ href: '#', label: 'Home', hasChildren: true, isActive: true },
-		{ href: '#', label: 'Nodi', hasChildren: true },
-		{ href: '#', label: 'Progetti', hasChildren: true },
-		// { href: '#', label: 'Shop', hasChildren: true },
-		{ href: '#', label: 'Posts', hasChildren: true },
+		{ href: '#', label: 'Home', hasChildren: false, isActive: true },
+		{ href: '#nodi', label: 'Nodi', hasChildren: false },
+		{ href: '#', label: 'Progetti', hasChildren: false },
+		{ href: '#', label: 'Posts', hasChildren: false },
+		{ href: '/events', label: 'Eventi', hasChildren: false },
+		{ href: '#', label: 'Foto', hasChildren: false },
 		{ href: '#', label: 'Contatti' }
 	];
 </script>

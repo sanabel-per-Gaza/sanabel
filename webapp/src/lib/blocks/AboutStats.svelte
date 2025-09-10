@@ -8,9 +8,9 @@
 	<div class="container mx-auto">
 		<div class="flex flex-row items-center space-x-2 items-start ">
 			<div class="flex flex-col mb-8 xl:mb-0 min-w-[400px] pt-8">
-				<SectionHeader preTitle="About Us" mainTitle="<span>Help is Our</span> <span>Main Goal Ever</span>" />
+				<SectionHeader preTitle="Chi siamo" mainTitle="<span class='font-bold'>Spighe</span> di solidarietà" />
 				<div class="xl:block mt-8">
-					<Button variant="reverted" href="#">More About</Button>
+					<Button variant="reverted" href="/about">Scopri di piú</Button>
 				</div>
 			</div>
 			<div class="flex flex-col py-8">

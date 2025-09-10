@@ -10,7 +10,7 @@
 	<div class="container mx-auto">
 		<div class="flex flex-row mb-8 items-start">
 			<div class="min-w-sm">
-				<SectionHeader preTitle="What we Do" mainTitle="<span>Helpo</span> <span>Causes</span>" />
+				<SectionHeader preTitle="Progetti" mainTitle="Sanabel progetti" />
 			</div>
 			<div class="col-lg-8 flex flex-col justify-end">
 				<p class="text-helpo-gray-text mt-8 lg:mt-0">
@@ -28,7 +28,7 @@
 					imageUrl="img/causes_1.jpg"
 					category="Water Delivery"
 					categoryColor="#49C2DF"
-					title="Clean Water in Africa"
+					title="Distribuzione di acqua potabile e kit per l’igiene"
 					percentage={78}
 					goal="25 000$"
 					pledged="20 350$"
@@ -37,7 +37,16 @@
 					imageUrl="img/causes_2.jpg"
 					category="Medicine"
 					categoryColor="#F36F8F"
-					title="Health in other Countries"
+					title="Supporto psicosociale con attività di gruppo e consulenza tra pari"
+					percentage={23}
+					goal="14 000$"
+					pledged="6 098$"
+				/>
+				<CauseCard
+					imageUrl="img/causes_2.jpg"
+					category="Medicine"
+					categoryColor="#F36F8F"
+					title="fornitura di ausili per la mobilità e la comunicazione"
 					percentage={23}
 					goal="14 000$"
 					pledged="6 098$"
@@ -46,7 +55,16 @@
 					imageUrl="img/causes_3.jpg"
 					category="Education"
 					categoryColor="#2EC774"
-					title="We Build and Create"
+					title="sostegno educativo per bambine e bambini autistici"
+					percentage={51}
+					goal="159 000$"
+					pledged="76 500$"
+				/>
+				<CauseCard
+					imageUrl="img/causes_3.jpg"
+					category="Education"
+					categoryColor="#2EC774"
+					title="formazione reciproca per assistenti, volontari e familiari"
 					percentage={51}
 					goal="159 000$"
 					pledged="76 500$"

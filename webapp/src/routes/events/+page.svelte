@@ -25,20 +25,6 @@
                     dates={dayjs(event.from).format('DD MMMM YYYY') + (event.to ? ' - ' + dayjs(event.to).format('DD MMMM YYYY') : '')}
                     times={event.times}
                 />
-                <EventCard
-                    imageUrl={'http://127.0.0.1:8090/api/files/' + event.collectionId + '/' + event.id + '/' + event.image}
-                    title={event.title}
-                    location={event.location}
-                    dates={event.dates}
-                    times={event.times}
-                />
-                <EventCard
-                    imageUrl={'http://127.0.0.1:8090/api/files/' + event.collectionId + '/' + event.id + '/' + event.image}
-                    title={event.title}
-                    location={event.location}
-                    dates={event.dates}
-                    times={event.times}
-                />
             {/each}
         </div>
     </section>

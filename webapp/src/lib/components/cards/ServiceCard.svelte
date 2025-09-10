@@ -6,7 +6,7 @@
 </script>
 
 <div class="text-center sm:text-left mb-12">
-  <div class="h-20 mb-6">
+  <div class="w-36 mb-6 mx-auto">
     <img src={iconSrc} alt="{title} icon" class="h-full mx-auto sm:mx-0" />
   </div>
   <div>
