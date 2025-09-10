@@ -1,0 +1,9 @@
+- [x] Implement the backend
+- [] Connect the frontend with the backend
+- [] fix donate button
+- [] create a singleton collection for the homepage
+- [x] create posts collection
+- [x] create events collection
+- [] handling donations
+- [] show posts and post details on frontend
+- [] show events and event details on frontend

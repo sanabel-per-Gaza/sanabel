@@ -55,7 +55,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 text-center mt-8">
-				<Button variant="reverted" href="#">More Causes</Button>
+				<!-- <Button variant="reverted" href="#">More Causes</Button> -->
 			</div>
 		</div>
 	</div>

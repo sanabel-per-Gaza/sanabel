@@ -12,6 +12,6 @@
 
 <div class="header-logo">
   <a class="header-logo__link" {href}>
-    <img class="h-10 md:h-11" src={themes[theme]} alt="Sanabel Logo" />
+    <img class="h-16" src={themes[theme]} alt="Sanabel Logo" />
   </a>
 </div>

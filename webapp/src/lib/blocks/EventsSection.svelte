@@ -21,8 +21,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="flex flex-row space-x-8">
-			<div class="col-md-6 col-lg-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				<EventCard
 					imageUrl="img/event_1.jpg"
 					title="Help for Language. Voluanteer"
@@ -30,8 +29,6 @@
 					dates="<b>September 30 - October 31,</b> 2019"
 					times="<b>10:00 AM - 18:00 PM,</b> Everyday"
 				/>
-			</div>
-			<div class="col-md-6 col-lg-4">
 				<EventCard
 					imageUrl="img/event_2.jpg"
 					title="The Culture of Africa. Rebirth"
@@ -39,8 +36,6 @@
 					dates="<b>September 30 - October 31,</b> 2019"
 					times="<b>10:00 AM - 18:00 PM,</b> Everyday"
 				/>
-			</div>
-			<div class="col-md-6 col-lg-4">
 				<EventCard
 					imageUrl="img/event_3.jpg"
 					title="Help for Language. Voluanteer"
@@ -48,7 +43,6 @@
 					dates="<b>April 15 - April 20,</b> 2019"
 					times="<b>10:00 AM - 15:00 PM,</b> Everyday"
 				/>
-			</div>
 		</div>
 		<div class="row">
 			<div class="col-12 text-center">
