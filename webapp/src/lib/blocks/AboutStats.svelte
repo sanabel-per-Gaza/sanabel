@@ -25,7 +25,8 @@
 				<p>
 					Il progetto nasce tra due sponde dello stesso mare, dalla collaborazione tra l’Unione Generale Palestinese delle Persone con Disabilità, il Centro Irada per l’Educazione Inclusiva di Gaza, e gruppi di educatrici, psicologhe, operatrici nel campo delle disabilità e delle neurodivergenze, ricercatrici universitarie, insegnanti, studentesse e solidali in tutta Italia. Oggi, da quel lato del mare, le condizioni di vita sono diventate ancora più complesse per chi vive con una disabilità o una neurodivergenza. Gli strumenti di assistenza e le reti di supporto sono frammentate. I bambini e le bambine con autismo, in particolare, faticano a ritrovare sicurezza, routine e stabilità. Sanabel tende una mano per:
 				</p>
-				<div class="flex flex-row mt-12 justify-between">
+
+				<!-- <div class="flex flex-row mt-12 justify-between">
 					<div class="flex-1 text-center mb-8 md:mb-0">
 						<h6 class="text-sm font-bold text-helpo-heading mb-2">People We Helped on 2018</h6>
 						<div class="text-6xl font-bold text-helpo-purple">
@@ -44,7 +45,48 @@
 							100<span class="text-4xl">+</span>
 						</div>
 					</div>
+				</div> -->
+				<div class="flex flex-row mt-12 justify-between">
+					<div class="flex-1 text-center mb-8 md:mb-0">
+						<h6 class="text-sm font-bold text-helpo-heading mb-2">Kit per l'igiene distribuiti</h6>
+						<div class="text-6xl font-bold text-helpo-purple">
+							15<span class="text-4xl">mila</span>
+						</div>
+					</div>
+					<div class="flex-1 text-center mb-8 md:mb-0">
+						<h6 class="text-sm font-bold text-helpo-heading mb-2">Ore di supporto psicosociale</h6>
+						<div class="text-6xl font-bold text-helpo-purple">
+							800<span class="text-4xl">+</span>
+						</div>
+					</div>
+					<div class="flex-1 text-center">
+						<h6 class="text-sm font-bold text-helpo-heading mb-2">Ausili per la mobilità forniti</h6>
+						<div class="text-6xl font-bold text-helpo-purple">
+							500<span class="text-4xl">+</span>
+						</div>
+					</div>
 				</div>
+				<div class="flex flex-row mt-12 justify-between">
+					<div class="flex-1 text-center mb-8 md:mb-0">
+						<h6 class="text-sm font-bold text-helpo-heading mb-2">Bambini autistici sostenuti</h6>
+						<div class="text-6xl font-bold text-helpo-purple">
+							250<span class="text-4xl"></span>
+						</div>
+					</div>
+					<div class="flex-1 text-center mb-8 md:mb-0">
+						<h6 class="text-sm font-bold text-helpo-heading mb-2">Volontari e familiari formati</h6>
+						<div class="text-6xl font-bold text-helpo-purple">
+							1.2<span class="text-4xl">mila</span>
+						</div>
+					</div>
+					<div class="flex-1 text-center">
+						<h6 class="text-sm font-bold text-helpo-heading mb-2">Campagne per l'inclusione</h6>
+						<div class="text-6xl font-bold text-helpo-purple">
+							15<span class="text-4xl">+</span>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			<!-- <div class="col-12 text-center xl:hidden mt-8">
 				<Button href="#">More About</Button>

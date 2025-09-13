@@ -18,9 +18,9 @@
 	</Content>
 	<div class="flex flex-col min-h-screen bg-white">
 		<Header on:toggleAside={toggleAside} />
-			<main class="main">
-				<slot />
-			</main>
+		<main class="main">
+			<slot />
+		</main>
 		<Footer />
 	</div>
 </Modal>

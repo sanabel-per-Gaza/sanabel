@@ -10,8 +10,8 @@
 
 </script>
 
-<main>
-    <section class="relative pt-32">
+<main class="container mx-auto">
+    <section class="relative pt-16">
         <div class="py-8">
             <SectionHeader center preTitle="Eventi" mainTitle="Eventi che ci vedono coinvolti" />
         </div>
