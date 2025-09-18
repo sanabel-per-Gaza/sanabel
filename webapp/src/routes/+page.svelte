@@ -15,6 +15,6 @@
     <Hero />
     <AboutStats />
     <WhatWeDo {nodes} />
-    <FeaturedCauses />
     <EventsSection {events} />
+    <FeaturedCauses />
   </main>
