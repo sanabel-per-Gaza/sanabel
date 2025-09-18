@@ -11,8 +11,8 @@
   </script>
   
   <main>
-    <Hero />
-    <AboutStats />
+
+    
     <WhatWeDo />
     <FeaturedCauses />
     <EventsSection {events} />
