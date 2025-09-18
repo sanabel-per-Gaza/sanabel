@@ -6,14 +6,15 @@
     import EventsSection from '$lib/blocks/EventsSection.svelte';
 
   export let data
-  const { events } = data
+  const { events, nodes } = data
+  $: console.log('nodes', nodes)
 
   </script>
   
   <main>
     <Hero />
     <AboutStats />
-    <WhatWeDo />
+    <WhatWeDo {nodes} />
     <FeaturedCauses />
     <EventsSection {events} />
   </main>

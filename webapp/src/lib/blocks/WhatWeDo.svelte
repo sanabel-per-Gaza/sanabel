@@ -1,7 +1,14 @@
-<!-- src/lib/blocks/WhatWeDo.svelte -->
 <script lang="ts">
 	import SectionHeader from '$lib/components/ui/SectionHeader.svelte';
 	import ServiceCard from '$lib/components/cards/ServiceCard.svelte';
+	import pb from '$lib/pocketbase';
+
+	export let nodes: {
+		id: string;
+		name: string;
+		description: string;
+		image: string;
+	}[]
 </script>
 
 <section class="section" id="nodi">
@@ -14,49 +21,15 @@
 				/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-			<div class="col-sm-6 col-lg-3">
-				<ServiceCard
-					iconSrc="napoli.png"
-					title="Napoli"
-					description="Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail,"
-				/>
-			</div>
-			<div class="col-sm-6 col-lg-3">
-				<ServiceCard
-					iconSrc="torino.png"
-					title="Torino"
-					description="Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet"
-				/>
-			</div>
-			<div class="col-sm-6 col-lg-3">
-				<ServiceCard
-					iconSrc="napoli.png"
-					title="Matera"
-					description="Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish"
-				/>
-			</div>
-			<div class="col-sm-6 col-lg-3">
-				<ServiceCard
-					iconSrc="torino.png"
-					title="Brescia"
-					description="Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead"
-				/>
-
-			</div>
-			<div class="col-sm-6 col-lg-3">
-				<ServiceCard
-					iconSrc="napoli.png"
-					title="Brescia"
-					description="Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead"
-				/>
-			</div>
-			<div class="col-sm-6 col-lg-3">
-				<ServiceCard
-					iconSrc="napoli.png"
-					title="Brescia"
-					description="Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish, mosshead"
-				/>
-			</div>
+			{#each nodes as node}
+				<div class="col-sm-6 col-lg-3">
+					<ServiceCard
+						iconSrc={pb.files.getURL(node, node.image)}
+						title={node.name}
+						description={node.description}
+					/>
+				</div>
+			{/each}
 		</div>
 	</div>
 </section>

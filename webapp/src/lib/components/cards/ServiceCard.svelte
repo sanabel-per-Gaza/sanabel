@@ -6,8 +6,8 @@
 </script>
 
 <div class="text-center sm:text-left mb-12">
-  <div class="w-36 mb-6 mx-auto">
-    <img src={iconSrc} alt="{title} icon" class="h-full mx-auto sm:mx-0" />
+  <div>
+    <img src={iconSrc} alt="{title} icon" class="h-45 mx-auto sm:mx-0" />
   </div>
   <div>
     <p class="text-helpo-heading text-xl font-bold">{title}</p>
