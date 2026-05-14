@@ -3,25 +3,31 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import { donationUrl } from '$lib/links';
 
-	const threads = [
+	const actions = [
 		{
-			title: 'Cura quotidiana',
-			text: 'Kit per l\'igiene, ausili e materiali essenziali proteggono salute, dignità e autonomia quando le reti di assistenza sono frammentate.'
+			verb: 'Distribuire',
+			text: 'kit per l\'igiene e acqua potabile'
 		},
 		{
-			title: 'Continuità educativa',
-			text: 'Bambine e bambini autistici ritrovano routine, ascolto e strumenti per comunicare anche in un contesto instabile.'
+			verb: 'Fornire',
+			text: 'ausili per la mobilità'
 		},
 		{
-			title: 'Competenze condivise',
-			text: 'Educatrici, psicologhe, operatrici, familiari e volontarie costruiscono insieme pratiche accessibili tra Gaza e l\'Italia.'
+			verb: 'Realizzare',
+			text: 'attività di supporto psico-sociale'
+		},
+		{
+			verb: 'Sostenere',
+			text: 'bambini autistici, bambine autistiche e le loro famiglie'
+		},
+		{
+			verb: 'Favorire',
+			text: 'l\'inclusione delle persone con disabilità e neurodivergenze'
+		},
+		{
+			verb: 'Promuovere',
+			text: 'campagne di sensibilizzazione'
 		}
-	];
-
-	const proofPoints = [
-		'15 mila kit per l\'igiene distribuiti',
-		'800 ore di supporto psicosociale',
-		'500 ausili per la mobilità forniti'
 	];
 </script>
 
@@ -31,10 +37,10 @@
 			<div class="mission-sticky">
 				<p class="mb-4 text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple">Chi siamo</p>
 				<h2 class="max-w-xl text-4xl font-bold leading-tight text-helpo-heading md:text-5xl">
-					Una rete che si piega insieme senza spezzarsi
+					Sanabel nasce tra Gaza e l'Italia
 				</h2>
 				<p class="mt-6 max-w-xl text-lg leading-8 text-helpo-gray-text">
-					Le sanabel (سنبلة, sunbula, spighe di grano) crescono meglio quando si sostengono a vicenda. Da questa immagine nasce il progetto: una relazione tra Gaza e l'Italia che mette al centro cura, disabilità, neurodivergenze e giustizia.
+					Le sanabel (سنبلة, sunbula, spighe di grano) sono forti e flessibili: crescono meglio quando si sostengono a vicenda e diventano un simbolo concreto della possibilità di resistere e rigenerare la vita attraverso legami comunitari e sociali.
 				</p>
 				<div class="grain-line mt-8" aria-hidden="true">
 					<span></span>
@@ -47,30 +53,30 @@
 			<div class="space-y-10">
 				<div class="rounded-sm bg-white/70 p-6 shadow-sm md:p-8">
 					<p class="text-xl font-bold leading-8 text-helpo-heading">
-						Sanabel sostiene persone con disabilità fisiche, sensoriali e intellettive, insieme a bambine e bambini autistici e neurodivergenti nella Striscia di Gaza.
+						Sanabel è un progetto di amicizia e sostegno alle persone con disabilità fisiche, sensoriali e intellettive nella Striscia di Gaza, con un focus specifico su bambini autistici, bambine autistiche e persone neurodivergenti.
 					</p>
 					<p class="mt-5 leading-8">
-						Il progetto nasce dalla collaborazione tra l'Unione Generale Palestinese delle Persone con Disabilità, il Centro Irada per l'Educazione Inclusiva di Gaza e una rete di educatrici, psicologhe, operatrici, ricercatrici, insegnanti, studentesse e solidali in Italia.
+						Sanabel è anche un'Associazione che nasce a Gaza e che, da aprile 2025, si è sviluppata in diverse città italiane, dove si sono costituiti i nodi Sanabel.
 					</p>
-				</div>
-
-				<div class="grid gap-5 md:grid-cols-3">
-					{#each threads as thread, index}
-						<article class="thread-panel">
-							<span class="thread-number">0{index + 1}</span>
-							<h3 class="mt-5 text-xl font-bold text-helpo-heading">{thread.title}</h3>
-							<p class="mt-4 text-sm leading-7 text-helpo-gray-text">{thread.text}</p>
-						</article>
-					{/each}
+					<p class="mt-5 leading-8">
+						Il progetto nasce tra due sponde dello stesso mare, il Mediterraneo, dalla collaborazione tra l'Unione Generale Palestinese delle Persone con Disabilità, il Centro Irada per l'Educazione Inclusiva di Gaza e gruppi di professionisti e professioniste nel campo dell'educazione, del sostegno psico-sociale, delle disabilità, delle neurodivergenze e della ricerca universitaria, insieme a insegnanti, studenti e studentesse in tutta Italia.
+					</p>
+					<p class="mt-5 leading-8">
+						Da quel lato del mare le condizioni di vita sono diventate ancora più difficili per chi vive con una disabilità o una neurodivergenza. Gli strumenti di assistenza e le reti di supporto, laddove ancora esistenti, sono totalmente frammentati. I bambini e le bambine autistici, in particolare, hanno perso ogni sicurezza e hanno bisogno di sostegno per ritrovare routine e stabilità.
+					</p>
 				</div>
 
 				<div class="proof-strip">
-					<p class="text-sm font-bold uppercase tracking-[0.22em] text-helpo-purple">Prime tracce del lavoro</p>
-					<ul class="mt-5 grid gap-3 md:grid-cols-3">
-						{#each proofPoints as point}
-							<li>{point}</li>
+					<p class="text-sm font-bold uppercase tracking-[0.22em] text-helpo-purple">Sanabel lavora sull'emergenza con uno sguardo teso verso il futuro</p>
+					<div class="mt-6 grid gap-4 md:grid-cols-2">
+						{#each actions as action, index}
+							<article class="thread-panel">
+								<span class="thread-number">0{index + 1}</span>
+								<h3 class="mt-4 text-xl font-bold text-helpo-heading">{action.verb}</h3>
+								<p class="mt-3 text-sm leading-7 text-helpo-gray-text">{action.text}</p>
+							</article>
 						{/each}
-					</ul>
+					</div>
 				</div>
 
 				<div class="flex flex-col gap-4 sm:flex-row">
@@ -148,9 +154,4 @@
 		padding: 1.5rem 0;
 	}
 
-	.proof-strip li {
-		color: #4a4c70;
-		font-weight: 700;
-		line-height: 1.6;
-	}
 </style>
