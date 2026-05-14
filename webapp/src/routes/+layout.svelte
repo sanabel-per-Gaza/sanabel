@@ -2,39 +2,58 @@
 	import '../app.css';
 	import Header from '$lib/blocks/Header.svelte';
 	import Footer from '$lib/blocks/Footer.svelte';
-	import Modal from '$lib/components/modal/Modal.svelte';
-	import Content from '$lib/components/modal/Content.svelte';
-	import Trigger from '$lib/components/modal/Trigger.svelte';
-  import { Donation } from '$lib/components/modal/Modals';
+	import Button from '$lib/components/ui/Button.svelte';
+	import { donationUrl } from '$lib/links';
 
 	let isAsideOpen = false;
 	const toggleAside = () => (isAsideOpen = !isAsideOpen);
 	const closeAside = () => (isAsideOpen = false);
 
 </script>
- <Modal modalId={Donation}>
-	<Content>
-		<div class="gfm-embed" data-url="https://www.gofundme.com/f/sanabel-per-le-persone-con-disabilita-e-neurodivergentigaza/widget/large?sharesheet=undefined&attribution_id=sl:3a71cd7d-5e38-45e9-a2bf-1abf1cbb24da"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-	</Content>
-	<div class="flex flex-col min-h-screen bg-white">
-		<Header on:toggleAside={toggleAside} />
-		<main class="main">
-			<slot />
-		</main>
-		<Footer />
-	</div>
-</Modal>
+
+<div class="flex flex-col min-h-screen bg-white">
+	<Header on:toggleAside={toggleAside} />
+	<main class="main">
+		<slot />
+	</main>
+	<Footer />
+</div>
 
 
 <!-- Aside (Mobile) Menu Overlay -->
 {#if isAsideOpen}
-	<!-- svelte-ignore a11y-click-events-have-key-events - a simple overlay -->
-	<div on:click={closeAside} class="fixed inset-0 bg-black/40 z-40 lg:hidden">
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div on:click|stopPropagation class="bg-helpo-light-gray h-full w-80 max-w-full shadow-lg p-8 transform-gpu transition-transform duration-300 {isAsideOpen ? 'translate-x-0' : '-translate-x-full'}">
-			<!-- A full implementation of NavLinks would go here for mobile -->
-			<h2 class="text-2xl font-bold text-helpo-heading">Menu</h2>
-			<p class="mt-4">Mobile navigation links would be listed here.</p>
-		</div>
+	<div class="fixed inset-0 z-40 lg:hidden">
+		<button
+			type="button"
+			aria-label="Chiudi menu"
+			class="absolute inset-0 bg-helpo-dark/50"
+			on:click={closeAside}
+		></button>
+		<aside class="relative ml-auto flex h-full w-80 max-w-full flex-col bg-helpo-light-gray p-8 shadow-lg">
+			<div class="flex items-center justify-between">
+				<h2 class="text-2xl font-bold text-helpo-heading">Menu</h2>
+				<button
+					type="button"
+					class="text-3xl leading-none text-helpo-purple"
+					aria-label="Chiudi menu"
+					on:click={closeAside}
+				>
+					&times;
+				</button>
+			</div>
+			<nav class="mt-10">
+				<ul class="flex flex-col gap-5 text-lg font-bold uppercase text-helpo-heading">
+					<li><a class="no-underline" href="/" on:click={closeAside}>Home</a></li>
+					<li><a class="no-underline" href="/#chi-siamo" on:click={closeAside}>Chi siamo</a></li>
+					<li><a class="no-underline" href="/#contatti" on:click={closeAside}>Contatti</a></li>
+				</ul>
+			</nav>
+			<div class="mt-auto pt-10">
+				<p class="mb-5 text-sm leading-relaxed text-helpo-gray-text">
+					Sostieni una rete di cura condivisa per persone con disabilità e bambine e bambini neurodivergenti a Gaza.
+				</p>
+				<Button variant="filled" href={donationUrl} target="_blank">Dona ora</Button>
+			</div>
+		</aside>
 	</div>
 {/if}

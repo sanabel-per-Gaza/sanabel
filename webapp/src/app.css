@@ -10,27 +10,8 @@
   --color-helpo-gray-text: #777;
   --color-helpo-heading: #4a4c70;
   
-  --font-quicksand: Quicksand, sans-serif, ui-sans-serif, system-ui;
-  --font-storytella: Storytella, cursive;
-}
-
-/* 
-  Define your custom fonts here. 
-  You will need to download these font files and place them in your `static/fonts` directory.
-*/
-@font-face {
-	font-family: 'Quicksand';
-	src: url('/fonts/quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
-	font-weight: 300 700;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Storytella';
-	src: url('/fonts/storytella/storytella.woff') format('woff'); /* Add other formats if you have them */
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  --font-quicksand: ui-rounded, "Avenir Next", "Nunito Sans", ui-sans-serif, system-ui;
+  --font-storytella: ui-serif, Georgia, serif;
 }
 
 /* Apply the default font to the body */

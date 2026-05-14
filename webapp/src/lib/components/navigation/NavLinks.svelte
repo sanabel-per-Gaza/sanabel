@@ -9,17 +9,8 @@
 
 	const links: Link[] = [
 		{ href: '/', label: 'Home', hasChildren: false, isActive: true },
-		{  label: 'Nodi', hasChildren: true, childrens: [
-			{ href: '/nodes/torino', label: 'Torino', hasChildren: false },
-			{ href: '/nodes/napoli', label: 'Napoli', hasChildren: false },
-			{ href: '/nodes/matera', label: 'Matera', hasChildren: false },
-			{ href: '/nodes/brescia', label: 'Brescia', hasChildren: false },
-		]},
-		{ href: '/', label: 'Progetti', hasChildren: false },
-		{ href: '/posts', label: 'Posts', hasChildren: false },
-		{ href: '/events', label: 'Eventi', hasChildren: false },
-		{ href: '/', label: 'Foto', hasChildren: false },
-		{ href: '/', label: 'Contatti' }
+		{ href: '/#chi-siamo', label: 'Chi siamo', hasChildren: false },
+		{ href: '/#contatti', label: 'Contatti' }
 	];
 	
 </script>
@@ -62,11 +53,6 @@
 </nav>
 
 <style>
-	/* Basic styles for the navigation */
-	nav {
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	}
-
 	.main-menu__item {
 		position: relative;
 	}

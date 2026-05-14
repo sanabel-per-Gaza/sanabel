@@ -1,7 +1,7 @@
 <!-- src/lib/components/cards/ProjectCard.svelte -->
-<script>
+<script lang="ts">
   export let imageUrl = 'img/projects_4.jpg';
-  export let category = 'Education';
+  export let category: 'Education' | 'Food' | 'Medicine' | 'Water Delivery' | string = 'Education';
   export let title = 'Help for Children of the East';
   export let description = 'Murray cod clownfish American sole rockfish dojo loach gulper, trout-perch footballfish, pelican eel.';
   export let goal = "25 000$";
@@ -9,13 +9,13 @@
   export let causeUrl = '#';
 
   // Map category to a background color
-  const categoryColors = {
+  const categoryColors: Record<string, string> = {
     Education: 'bg-green-500/80',
     Food: 'bg-yellow-500/80',
     Medicine: 'bg-pink-500/80',
     'Water Delivery': 'bg-blue-500/80',
   };
-  const badgeColors = {
+  const badgeColors: Record<string, string> = {
     Education: 'bg-green-500',
     Food: 'bg-yellow-500',
     Medicine: 'bg-pink-500',

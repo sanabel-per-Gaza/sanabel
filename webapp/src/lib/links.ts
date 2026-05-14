@@ -1,0 +1,1 @@
+export const donationUrl = 'https://www.gofundme.com/f/sanabel-per-le-persone-con-disabilita-e-neurodivergentigaza';

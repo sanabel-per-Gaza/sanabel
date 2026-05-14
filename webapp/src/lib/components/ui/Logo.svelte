@@ -1,12 +1,11 @@
 <!-- src/lib/components/ui/Logo.svelte -->
-<script>
+<script lang="ts">
   export let href = '/';
-  // Use 'dark' for the white logo on dark backgrounds, 'light' for the dark logo on light backgrounds
-  export let theme = 'light'; 
+  export let theme: 'light' | 'dark' = 'light'; 
 
   const themes = {
-    light: '/logo-sanabel.jpeg', // Dark logo for light backgrounds
-    dark: '/logo-sanabel.jpeg'  // White logo for dark backgrounds
+    light: '/logo-sanabel.jpeg',
+    dark: '/logo-sanabel.jpeg'
   };
 </script>
 

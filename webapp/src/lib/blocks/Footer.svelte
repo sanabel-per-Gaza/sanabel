@@ -2,65 +2,51 @@
 <script lang="ts">
 	import Logo from '$lib/components/ui/Logo.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
+	import { donationUrl } from '$lib/links';
+
+	const links = [
+		{ href: '/', label: 'Home' },
+		{ href: '/#chi-siamo', label: 'Chi siamo' },
+		{ href: '#contatti', label: 'Contatti' }
+	];
 </script>
 
-<footer class="bg-helpo-dark text-gray-400 py-16">
-	<div class="max-w-5xl mx-auto">
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			<!-- Column 1: Logo & Contacts -->
-			<div class="mb-8 lg:mb-0">
-				<div class="mb-6">
+<footer id="contatti" class="bg-helpo-dark text-gray-300 py-16">
+	<div class="container mx-auto">
+		<div class="grid grid-cols-1 gap-10 md:grid-cols-[1.15fr_0.7fr_1fr]">
+			<div>
+				<div class="mb-6 max-w-44">
 					<Logo theme="dark" />
 				</div>
-				<div class="text-sm space-y-2">
-					<p>Phone: <a href="tel:+31859644725" class="no-underline hover:text-white"></a></p>
-					<p>Email: <a href="mailto:support@helpo.org" class="no-underline hover:text-white"></a></p>
-				</div>
-				<ul class="flex space-x-8 mt-6 text-white text-lg">
-					<li><a href="#" class="hover:opacity-75"><i class="fa fa-facebook" /></a></li>
-					<li><a href="#" class="hover:opacity-75"><i class="fa fa-twitter" /></a></li>
-					<li><a href="#" class="hover:opacity-75"><i class="fa fa-google-plus" /></a></li>
-					<li><a href="#" class="hover:opacity-75"><i class="fa fa-instagram" /></a></li>
-				</ul>
+				<p class="max-w-md leading-7">
+					Sanabel intreccia competenze e solidarietà tra Gaza e l'Italia per sostenere persone con disabilità e bambine e bambini neurodivergenti.
+				</p>
 			</div>
 
-			<!-- Column 2: Menu -->
-			<div class="offset-xl-1 mb-8 lg:mb-0">
-				<h6 class="text-white text-xl font-bold mb-5">Menu & Links</h6>
+			<div>
+				<h2 class="text-xl font-bold text-white mb-5">Naviga</h2>
 				<nav>
-					<ul class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-						<li><a href="#" class="no-underline hover:text-white">Home Page</a></li>
-						<li><a href="#" class="no-underline hover:text-white">Blog & News</a></li>
-						<li><a href="#" class="no-underline hover:text-white">About Us</a></li>
-						<li><a href="#" class="no-underline hover:text-white">Contact Us</a></li>
-						<li><a href="#" class="no-underline hover:text-white">Pages</a></li>
-						<li><a href="#" class="no-underline hover:text-white">Elements</a></li>
-						<li><a href="#" class="no-underline hover:text-white">Causes</a></li>
-						<li><a href="#" class="no-underline hover:text-white">Documentation</a></li>
+					<ul class="space-y-3 text-sm font-bold uppercase tracking-[0.16em]">
+						{#each links as link}
+							<li><a href={link.href} class="no-underline hover:text-white">{link.label}</a></li>
+						{/each}
 					</ul>
 				</nav>
 			</div>
 
-			<!-- Column 3: Newsletter -->
-			<div class="offset-xl-1">
-				<h6 class="text-white text-xl font-bold mb-5">Newsletter</h6>
-				<form class="flex flex-col items-start">
-					<input
-						class="bg-transparent border-b-2 border-gray-700 w-full py-2 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-helpo-yellow"
-						type="email"
-						placeholder="Enter your E-mail"
-					/>
-					<div class="mt-6 w-full">
-						<Button variant="filled">Subscribe</Button>
-					</div>
-				</form>
+			<div>
+				<h2 class="text-xl font-bold text-white mb-5">Contatti</h2>
+				<p class="leading-7">
+					Per collaborazioni, disponibilità sul territorio o domande sul progetto, usa la raccolta come primo punto di contatto pubblico. I canali diretti verranno pubblicati appena saranno pronti.
+				</p>
+				<div class="mt-6">
+					<Button variant="filled" href={donationUrl} target="_blank">Apri la raccolta</Button>
+				</div>
 			</div>
 		</div>
 
-		<!-- Copyright -->
-		<div class="items-baseline mt-16 text-sm text-gray-600">
-			<div class="text-center md:text-right">
-				<a href="#" class="no-underline hover:text-white">Privacy Policy</a>
+		<div class="mt-14 border-t border-white/10 pt-6 text-sm text-gray-500">
+			<p>Sanabel. Spighe di solidarietà per Gaza.</p>
 		</div>
 	</div>
 </footer>
