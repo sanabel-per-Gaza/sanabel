@@ -53,25 +53,24 @@
 			<div class="space-y-10">
 				<div class="rounded-sm bg-white/70 p-6 shadow-sm md:p-8">
 					<p class="text-xl font-bold leading-8 text-helpo-heading">
-						Sanabel è un progetto di amicizia e sostegno alle persone con disabilità fisiche, sensoriali e intellettive nella Striscia di Gaza, con un focus specifico su bambini autistici, bambine autistiche e persone neurodivergenti.
+						Sanabel è un progetto di amicizia e sostegno alle persone con disabilità fisiche, sensoriali, intellettive nella Striscia di Gaza, che ha come focus specifico bambini autistici e bambine autistiche, e/o neurodivergenti.
 					</p>
 					<p class="mt-5 leading-8">
-						Sanabel è anche un'Associazione che nasce a Gaza e che, da aprile 2025, si è sviluppata in diverse città italiane, dove si sono costituiti i nodi Sanabel.
+						Sanabel è anche un'Associazione che nasce a Gaza e che, a partire da aprile 2025, si è sviluppata in diverse città italiane, dove si sono costituiti i "nodi Sanabel" …
 					</p>
 					<p class="mt-5 leading-8">
-						Il progetto nasce tra due sponde dello stesso mare, il Mediterraneo, dalla collaborazione tra l'Unione Generale Palestinese delle Persone con Disabilità, il Centro Irada per l'Educazione Inclusiva di Gaza e gruppi di professionisti e professioniste nel campo dell'educazione, del sostegno psico-sociale, delle disabilità, delle neurodivergenze e della ricerca universitaria, insieme a insegnanti, studenti e studentesse in tutta Italia.
+						Il progetto nasce tra due sponde dello stesso mare, il Mediterraneo, dalla collaborazione tra il Centro Irada per l'Educazione Inclusiva di Gaza e gruppi di professionisti/e nel campo dell'educazione, del sostegno psico-sociale, delle disabilità e delle neurodivergenze, della ricerca universitaria, insegnanti, studenti/studentesse in tutta Italia (i nodi Sanabel).
 					</p>
 					<p class="mt-5 leading-8">
-						Da quel lato del mare le condizioni di vita sono diventate ancora più difficili per chi vive con una disabilità o una neurodivergenza. Gli strumenti di assistenza e le reti di supporto, laddove ancora esistenti, sono totalmente frammentati. I bambini e le bambine autistici, in particolare, hanno perso ogni sicurezza e hanno bisogno di sostegno per ritrovare routine e stabilità.
+						Da quel lato del mare le condizioni di vita sono diventate ancora più difficili per chi vive con una disabilità o una neurodivergenza. Gli strumenti di assistenza e le reti di supporto, laddove ancora esistenti, sono totalmente frammentati. I bambini e le bambine autistici/che, in particolare, hanno perso ogni sicurezza e hanno bisogno di sostegno per ritrovare routine e stabilità.
 					</p>
 				</div>
 
 				<div class="proof-strip">
 					<p class="text-sm font-bold uppercase tracking-[0.22em] text-helpo-purple">Sanabel lavora sull'emergenza con uno sguardo teso verso il futuro</p>
 					<div class="mt-6 grid gap-4 md:grid-cols-2">
-						{#each actions as action, index}
+						{#each actions as action}
 							<article class="thread-panel">
-								<span class="thread-number">0{index + 1}</span>
 								<h3 class="mt-4 text-xl font-bold text-helpo-heading">{action.verb}</h3>
 								<p class="mt-3 text-sm leading-7 text-helpo-gray-text">{action.text}</p>
 							</article>

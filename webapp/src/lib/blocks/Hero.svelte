@@ -18,12 +18,12 @@
 						<span></span>
 						<span></span>
 					</div>
-					<p class="text-sm font-bold uppercase tracking-[0.28em] text-helpo-yellow">Sanabel per Gaza</p>
+					<p class="text-sm font-bold uppercase tracking-[0.28em] text-helpo-yellow">Sanabel</p>
 					<h1 id="home-hero-title" class="max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[5.25rem]">
-						Spighe di solidarietà per persone con disabilità e neurodivergenze
+						spighe di solidarietà per Gaza
 					</h1>
 					<p class="max-w-2xl text-lg leading-8 text-white/90 xl:text-xl xl:leading-9">
-						Sanabel unisce reti palestinesi e solidali in Italia per sostenere cura, autonomia e continuità educativa nella Striscia di Gaza. Non è un aiuto che parte da qui per arrivare là: è un cammino comune, fatto di competenze condivise e responsabilità reciproca.
+						Sanabel non è beneficenza o assistenzialismo, non è un aiuto che parte da qui per arrivare là. È uno scambio profondo, un percorso comune e condiviso che unisce le nostre esperienze, competenze e desideri di giustizia. Ci sosteniamo a vicenda, ogni giorno, come spighe che si piegano insieme al vento senza spezzarsi.
 					</p>
 					<div class="flex flex-col gap-4 sm:flex-row">
 						<Button variant="primary" href={donationUrl} target="_blank">Dona ora</Button>
@@ -37,14 +37,14 @@
 
 <style>
 	.hero-field {
-		background-image: linear-gradient(90deg, rgba(32, 33, 43, 0.86), rgba(32, 33, 43, 0.24)), url('/promo_2.jpg');
+		background-image: linear-gradient(90deg, rgba(32, 33, 43, 0.86), rgba(32, 33, 43, 0.24)), url('/hero-image.jpeg');
 		background-size: cover;
 		background-position: 58% center;
 	}
 
 	@media (min-width: 1280px) {
 		.hero-field {
-			background-image: linear-gradient(90deg, rgba(32, 33, 43, 0.9) 0%, rgba(32, 33, 43, 0.68) 42%, rgba(32, 33, 43, 0.18) 100%), url('/promo_2.jpg');
+			background-image: linear-gradient(90deg, rgba(32, 33, 43, 0.9) 0%, rgba(32, 33, 43, 0.68) 42%, rgba(32, 33, 43, 0.18) 100%), url('/hero-image.jpeg');
 			background-position: center right;
 		}
 	}

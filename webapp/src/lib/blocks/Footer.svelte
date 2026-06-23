@@ -1,8 +1,6 @@
 <!-- src/lib/blocks/Footer.svelte -->
 <script lang="ts">
 	import Logo from '$lib/components/ui/Logo.svelte';
-	import Button from '$lib/components/ui/Button.svelte';
-	import { donationUrl } from '$lib/links';
 
 	const links = [
 		{ href: '/', label: 'Home' },
@@ -19,7 +17,7 @@
 					<Logo theme="dark" />
 				</div>
 				<p class="max-w-md leading-7">
-					Sanabel intreccia competenze e solidarietà tra Gaza e l'Italia per sostenere persone con disabilità e bambine e bambini neurodivergenti.
+					Sostieni il progetto Sanabel… seminiamo umanità
 				</p>
 			</div>
 
@@ -35,18 +33,23 @@
 			</div>
 
 			<div>
-				<h2 class="text-xl font-bold text-white mb-5">Contatti</h2>
-				<p class="leading-7">
-					Per collaborazioni, disponibilità sul territorio o domande sul progetto, usa la raccolta come primo punto di contatto pubblico. I canali diretti verranno pubblicati appena saranno pronti.
-				</p>
-				<div class="mt-6">
-					<Button variant="filled" href={donationUrl} target="_blank">Apri la raccolta</Button>
+				<h2 class="text-xl font-bold text-white mb-5">Sostieni</h2>
+				<div class="leading-7 space-y-4">
+					<div>
+						<p class="text-sm text-gray-400 mb-1">Bonifico bancario</p>
+						<p class="font-mono text-sm">IBAN: IT23Q0501804000000020000463</p>
+						<p class="text-sm text-gray-400 mt-1">Causale: Sanabel per Gaza</p>
+					</div>
+					<div>
+						<p class="text-sm text-gray-400 mb-1">PayPal</p>
+						<p class="font-mono text-sm">donazioni@associazionesanabel.org</p>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="mt-14 border-t border-white/10 pt-6 text-sm text-gray-500">
-			<p>Sanabel. Spighe di solidarietà per Gaza.</p>
+			<p>Sanabel — spighe di solidarietà per Gaza</p>
 		</div>
 	</div>
 </footer>
