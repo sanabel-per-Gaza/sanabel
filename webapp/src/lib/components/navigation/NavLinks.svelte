@@ -10,6 +10,7 @@
 	const links: Link[] = [
 		{ href: '/', label: 'Home', hasChildren: false, isActive: true },
 		{ href: '/#chi-siamo', label: 'Chi siamo', hasChildren: false },
+		{ href: '/blog', label: 'Blog', hasChildren: false },
 		{ href: '/#contatti', label: 'Contatti' }
 	];
 	
