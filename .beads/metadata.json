@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "sanabel",
+  "project_id": "9056d99b-299c-486d-9375-ff0d6df3b07d"
+}
