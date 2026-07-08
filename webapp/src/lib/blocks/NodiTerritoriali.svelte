@@ -19,8 +19,13 @@
 		<div class="text-center mb-14">
 			<p class="mb-4 text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple">Nodi territoriali</p>
 			<h2 class="text-4xl font-bold leading-tight text-helpo-heading md:text-5xl">
-				Ci potete raggiungere in queste città
+				Una rete di solidarietà diffusa
 			</h2>
+			<p class="mt-6 max-w-3xl mx-auto text-lg leading-8 text-helpo-gray-text">
+				Sanabel vive attraverso una rete di persone, gruppi e realtà coinvolte in diverse città italiane.
+				In questi territori nascono iniziative, incontri e attività di sensibilizzazione che contribuiscono a
+				sostenere il progetto e a costruire legami concreti di solidarietà con Gaza.
+			</p>
 		</div>
 
 		<div class="grid gap-6 md:grid-cols-2 mb-8">

@@ -37,8 +37,14 @@
 			<div class="mission-sticky">
 				<p class="mb-4 text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple">Chi siamo</p>
 				<h2 class="max-w-xl text-4xl font-bold leading-tight text-helpo-heading md:text-5xl">
-					Sanabel nasce tra Gaza e l'Italia
+					Sanabel: seminiamo umanità
 				</h2>
+				<img
+					class="mt-6 w-full max-w-xl object-cover"
+					src="/abbraccio_spalle.jpeg"
+					alt=""
+					loading="lazy"
+				/>
 				<p class="mt-6 max-w-xl text-lg leading-8 text-helpo-gray-text">
 					Le sanabel (سنبلة, sunbula, spighe di grano) sono forti e flessibili: crescono meglio quando si sostengono a vicenda e diventano un simbolo concreto della possibilità di resistere e rigenerare la vita attraverso legami comunitari e sociali.
 				</p>
@@ -52,22 +58,42 @@
 
 			<div class="space-y-10">
 				<div class="rounded-sm bg-white/70 p-6 shadow-sm md:p-8">
-					<p class="text-xl font-bold leading-8 text-helpo-heading">
-						Sanabel è un progetto di amicizia e sostegno alle persone con disabilità fisiche, sensoriali, intellettive nella Striscia di Gaza, che ha come focus specifico bambini autistici e bambine autistiche, e/o neurodivergenti.
+					<p class="text-lg leading-8 text-helpo-gray-text">
+						Sanabel è un progetto di amicizia e sostegno rivolto alle persone con disabilità fisiche, sensoriali e
+						intellettive nella Striscia di Gaza, con un focus specifico dedicato ai bambini autistici, alle bambine
+						autistiche e alle persone neuro divergenti. È anche un'Associazione che nasce a Gaza e che, a partire
+						da aprile 2025, si è sviluppata in diverse città italiane attraverso la costituzione dei "nodi Sanabel".
 					</p>
-					<p class="mt-5 leading-8">
-						Sanabel è anche un'Associazione che nasce a Gaza e che, a partire da aprile 2025, si è sviluppata in diverse città italiane, dove si sono costituiti i "nodi Sanabel" …
+					<p class="mt-5 leading-8 text-helpo-gray-text">
+						Il progetto nasce tra le due sponde del Mediterraneo dalla collaborazione tra il Centro Irada per
+						l'Educazione Inclusiva di Gaza e gruppi di professionisti e professioniste nel campo dell'educazione,
+						del sostegno psico-sociale, delle disabilità e delle neurodivergenze, della ricerca universitaria,
+						insegnanti, studenti e studentesse in tutta Italia.
 					</p>
-					<p class="mt-5 leading-8">
-						Il progetto nasce tra due sponde dello stesso mare, il Mediterraneo, dalla collaborazione tra il Centro Irada per l'Educazione Inclusiva di Gaza e gruppi di professionisti/e nel campo dell'educazione, del sostegno psico-sociale, delle disabilità e delle neurodivergenze, della ricerca universitaria, insegnanti, studenti/studentesse in tutta Italia (i nodi Sanabel).
+					<p class="mt-5 leading-8 font-bold text-helpo-heading">
+						Sanabel non è beneficenza o assistenzialismo; non è un aiuto che parte da "qui" per arrivare "là". È uno
+						scambio profondo, un percorso comune e condiviso che unisce le nostre esperienze, competenze e desideri
+						di giustizia.
 					</p>
-					<p class="mt-5 leading-8">
-						Da quel lato del mare le condizioni di vita sono diventate ancora più difficili per chi vive con una disabilità o una neurodivergenza. Gli strumenti di assistenza e le reti di supporto, laddove ancora esistenti, sono totalmente frammentati. I bambini e le bambine autistici/che, in particolare, hanno perso ogni sicurezza e hanno bisogno di sostegno per ritrovare routine e stabilità.
+					<p class="mt-5 leading-8 text-helpo-gray-text">
+						Ci sosteniamo a vicenda, ogni giorno, come spighe che si piegano insieme al vento senza spezzarsi.
+					</p>
+					<p class="mt-5 leading-8 text-helpo-gray-text">
+						Oggi, dopo oltre due anni di ininterrotta violenza, da quel lato del mare le condizioni di vita sono
+						diventate insostenibili e letali, segnate da un'esasperazione sistematica della brutalità e della
+						privazione nel pieno di un contesto genocidario.
+					</p>
+					<p class="mt-5 leading-8 text-helpo-gray-text">
+						Le reti di supporto sono frammentate e i bambini e le bambine autistici e autistiche hanno perso ogni
+						sicurezza.
+					</p>
+					<p class="mt-5 leading-8 font-bold text-helpo-heading">
+						Per questo, Sanabel lavora sull'emergenza ma con uno sguardo teso verso il futuro.
 					</p>
 				</div>
 
 				<div class="proof-strip">
-					<p class="text-sm font-bold uppercase tracking-[0.22em] text-helpo-purple">Sanabel lavora sull'emergenza con uno sguardo teso verso il futuro</p>
+					<p class="text-sm font-bold uppercase tracking-[0.22em] text-helpo-purple">Cosa facciamo</p>
 					<div class="mt-6 grid gap-5 md:grid-cols-3">
 						{#each clusters as cluster}
 							<article class="cluster-card">
