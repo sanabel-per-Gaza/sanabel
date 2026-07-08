@@ -45,8 +45,9 @@
 				<ul class="flex flex-col gap-5 text-lg font-bold uppercase text-helpo-heading">
 					<li><a class="no-underline" href="/" on:click={closeAside}>Home</a></li>
 					<li><a class="no-underline" href="/#chi-siamo" on:click={closeAside}>Chi siamo</a></li>
-					<li><a class="no-underline" href="/blog" on:click={closeAside}>Blog</a></li>
 					<li><a class="no-underline" href="/progetti" on:click={closeAside}>Progetti</a></li>
+					<li><a class="no-underline" href="#" on:click={closeAside}>Gaza</a></li>
+					<li><a class="no-underline" href="/blog" on:click={closeAside}>Blog</a></li>
 					<li><a class="no-underline" href="/#contatti" on:click={closeAside}>Contatti</a></li>
 				</ul>
 			</nav>
