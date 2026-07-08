@@ -15,6 +15,10 @@
 }
 
 /* Apply the default font to the body */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	@apply font-quicksand text-helpo-gray-text antialiased;
 }
