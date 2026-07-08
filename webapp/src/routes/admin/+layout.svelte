@@ -54,6 +54,27 @@
 					</a>
 				</li>
 			</ul>
+			<div class="mt-6 border-t border-white/10 pt-6">
+				<p class="mb-3 px-3 text-xs font-bold uppercase tracking-[0.15em] text-gray-500">Progetti</p>
+				<ul class="space-y-1">
+					<li>
+						<a
+							href="/admin/progetti"
+							class="block rounded px-3 py-2 text-sm transition-colors hover:bg-white/10 {$page.url.pathname === '/admin/progetti' ? 'bg-white/15 font-bold' : ''}"
+						>
+							Tutti i progetti
+						</a>
+					</li>
+					<li>
+						<a
+							href="/admin/progetti/new"
+							class="block rounded px-3 py-2 text-sm transition-colors hover:bg-white/10 {$page.url.pathname === '/admin/progetti/new' ? 'bg-white/15 font-bold' : ''}"
+						>
+							Nuovo progetto
+						</a>
+					</li>
+				</ul>
+			</div>
 			<div class="mt-auto pt-8">
 				<button
 					on:click={handleLogout}
