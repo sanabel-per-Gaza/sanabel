@@ -13,7 +13,7 @@
 		{ href: '/progetti', label: 'Progetti', hasChildren: false },
 		{ href: '#', label: 'Gaza', hasChildren: false },
 		{ href: '/blog', label: 'Blog', hasChildren: false },
-		{ href: '/#contatti', label: 'Contatti' }
+		{ href: '/#nodi', label: 'Contatti' }
 	];
 	
 </script>

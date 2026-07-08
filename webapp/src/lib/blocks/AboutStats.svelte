@@ -114,7 +114,7 @@
 
 				<div class="flex flex-col gap-4 sm:flex-row">
 					<Button variant="reverted" href={donationUrl} target="_blank">Sostieni la raccolta</Button>
-					<Button variant="reverted" href="/#contatti">Parla con noi</Button>
+					<Button variant="reverted" href="/#nodi">Parla con noi</Button>
 				</div>
 			</div>
 		</div>
