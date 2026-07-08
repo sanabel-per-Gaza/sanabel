@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
-	const isLoginPage = $page.url.pathname.includes('/admin/login');
+	$: isLoginPage = $page.url.pathname.includes('/admin/login');
 
 	onMount(() => {
 		if (!isLoginPage && !auth.isValid) {
@@ -13,7 +13,7 @@
 		}
 	});
 
-	// Watch auth state
+	// Watch auth state — redirect to login if session drops
 	$: if (browser && !isLoginPage && $auth && !auth.isValid) {
 		goto('/admin/login');
 	}
@@ -24,9 +24,12 @@
 	}
 </script>
 
-{#if isLoginPage || !browser}
+{#if isLoginPage}
 	<slot />
-{:else}
+{:else if !browser}
+	<!-- SSR: render slot for SvelteKit hydration -->
+	<div style="display: contents"><slot /></div>
+{:else if auth.isValid}
 	<div class="flex min-h-screen bg-helpo-light-gray">
 		<nav class="flex w-56 shrink-0 flex-col bg-helpo-dark p-6 text-white">
 			<div class="mb-10">
@@ -64,4 +67,10 @@
 			<slot />
 		</main>
 	</div>
+{:else}
+	<!-- Not authenticated, redirecting — keep slot alive for SvelteKit -->
+	<div class="flex min-h-screen items-center justify-center bg-helpo-light-gray">
+		<p class="text-helpo-gray-text">Reindirizzamento…</p>
+	</div>
+	<div style="display: contents"><slot /></div>
 {/if}
