@@ -25,7 +25,7 @@
 				<div class="flex flex-col sm:flex-row sm:items-end sm:justify-between xl:flex-col xl:items-start xl:justify-start">
 					<SectionHeader
 						preTitle="Testimonials"
-						mainTitle="<span>What People</span><br /><span>Says About Us</span>"
+						mainTitle="What People Says About Us"
 					/>
 					<!-- Slider Nav -->
 					<div class="slider__nav mt-8 sm:mt-0 xl:mt-12">

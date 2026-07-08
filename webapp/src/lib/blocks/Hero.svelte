@@ -19,7 +19,7 @@
 						<span></span>
 					</div>
 					<p class="text-sm font-bold uppercase tracking-[0.28em] text-helpo-yellow">Sanabel</p>
-					<h1 id="home-hero-title" class="max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[5.25rem]">
+					<h1 id="home-hero-title" class="max-w-4xl text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[5.25rem]" style="color: #fefdf6; text-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.25);">
 						spighe di solidarietà per Gaza
 					</h1>
 					<p class="max-w-2xl text-lg leading-8 text-white/90 xl:text-xl xl:leading-9">
