@@ -30,7 +30,7 @@
 <section id="attivita" class="section py-20 lg:py-28">
 	<div class="container mx-auto">
 		<div class="text-center mb-16">
-			<p class="mb-4 text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple">Attività</p>
+			<!-- <p class="mb-4 text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple">Attività</p> -->
 			<h2 class="text-4xl font-bold leading-tight text-helpo-heading md:text-5xl">
 				I nostri progetti
 			</h2>
@@ -40,6 +40,9 @@
 				contribuiscono a sostenere il progetto e a costruire legami concreti di solidarietà con Gaza.
 				Di seguito le nostre principali attività.
 			</p>
+			<h2 class="mt-6 text-2xl font-bold leading-tight text-helpo-heading md:text-3xl">
+				Vivi con noi ogni nuovo progetto.
+			</h2>
 		</div>
 
 		{#if loading}
