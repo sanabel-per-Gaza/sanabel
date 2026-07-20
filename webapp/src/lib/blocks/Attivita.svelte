@@ -32,10 +32,13 @@
 		<div class="text-center mb-16">
 			<p class="mb-4 text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple">Attività</p>
 			<h2 class="text-4xl font-bold leading-tight text-helpo-heading md:text-5xl">
-				Il ruolo dei nodi Sanabel in Italia
+				I nostri progetti
 			</h2>
 			<p class="mt-6 max-w-3xl mx-auto text-lg leading-8 text-helpo-gray-text">
-				Il ruolo dei nodi Sanabel in Italia è dare vita a campagne di sensibilizzazione e finanziamento delle diverse attività portate avanti a Gaza. La costante relazione con il nodo Sanabel di Gaza permette di mantenere un contatto diretto con il partner locale, insieme al quale si identificano le iniziative da realizzare. Una costruzione concreta di relazioni tra due comunità, italiana e gazawi.
+				Sanabel vive attraverso una rete di solidarietà diffusa di persone, gruppi e realtà coinvolte in
+				diverse città italiane. In questi territori nascono iniziative, incontri e attività di sensibilizzazione che
+				contribuiscono a sostenere il progetto e a costruire legami concreti di solidarietà con Gaza.
+				Di seguito le nostre principali attività.
 			</p>
 		</div>
 
