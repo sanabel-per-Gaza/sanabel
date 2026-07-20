@@ -1,38 +1,41 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	type Link = {
 		href?: string;
 		label: string;
 		hasChildren?: boolean;
-		isActive?: boolean;
 		childrens?: Link[];
 	};
 
 	const links: Link[] = [
-		{ href: '/', label: 'Home', hasChildren: false, isActive: true },
-		{ href: '/#chi-siamo', label: 'Chi siamo', hasChildren: false },
+		{ href: '/', label: 'Home', hasChildren: false },
+		{ href: '/chi-siamo', label: 'Chi siamo', hasChildren: false },
 		{ href: '/progetti', label: 'Progetti', hasChildren: false },
 		{ href: '#', label: 'Gaza', hasChildren: false },
 		{ href: '/blog', label: 'Blog', hasChildren: false },
 		{ href: '/#nodi', label: 'Contatti' }
 	];
-	
+
+	$: currentPath = $page.url.pathname;
 </script>
 
 <nav>
 	<ul class="main-menu hidden lg:flex items-center space-x-6 xl:space-x-10">
 		{#each links as link}
-			<li class="main-menu__item relative group {link.isActive ? 'main-menu__item--active' : ''}">
+			{@const isActive = link.href === '/' ? currentPath === '/' : link.href && link.href !== '#' ? currentPath.startsWith(link.href) : false}
+			<li class="main-menu__item relative group {isActive ? 'main-menu__item--active' : ''}">
 				<a
 					class="main-menu__link relative inline-block text-sm font-medium py-8 uppercase no-underline transition-opacity duration-300 hover:opacity-75
                            before:content-[''] before:block before:h-0.5 before:w-0 before:bg-helpo-yellow before:absolute before:top-0.5 before:left-0 before:transition-all before:duration-300
-                           group-hover:before:w-full {link.isActive ? 'before:w-full' : ''}"
+                           group-hover:before:w-full {isActive ? 'before:w-full' : ''}"
 					href={link.href ? link.href : undefined}
 				>
 					<span class="relative">
 						{link.label}
 						{#if link.hasChildren}
 							<span
-								class="absolute -right-4 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-300 group-hover:opacity-75 {link.isActive
+								class="absolute -right-4 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-300 group-hover:opacity-75 {isActive
 									? 'opacity-75'
 									: ''}"
 							></span>
