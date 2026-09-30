@@ -8,8 +8,8 @@
 	$: img = imageUrl(post, 'image', '800x0');
 </script>
 
-<article class="group relative flex flex-col overflow-hidden rounded-sm bg-white shadow-sm transition-shadow hover:shadow-lg">
-	<div class="aspect-[16/10] overflow-hidden bg-helpo-purple/5">
+<article class="group relative flex flex-col overflow-hidden rounded-sm bg-helpo-light-gray transition-shadow hover:shadow-lg">
+	<div class="aspect-[16/10] overflow-hidden bg-helpo-purple/8">
 		{#if img}
 			<img
 				src={img}

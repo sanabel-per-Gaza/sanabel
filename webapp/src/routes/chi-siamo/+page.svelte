@@ -47,7 +47,7 @@
 </section>
 
 {#if c.chisiamo_values.length}
-	<section class="bg-helpo-light-gray py-20 lg:py-28">
+	<section class="pb-20 lg:pb-28">
 		<div class="container">
 			<div class="mb-14 text-center">
 				<p class="eyebrow mb-3">{c.chisiamo_values_eyebrow}</p>
@@ -56,8 +56,8 @@
 
 			<div class="grid gap-6">
 				{#each c.chisiamo_values as value, i}
-					<div class="flex flex-col gap-6 rounded-sm bg-white p-8 shadow-sm sm:flex-row sm:items-center md:gap-10 md:p-10">
-						<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-helpo-yellow/15 text-[#c9a21c]">
+					<div class="flex flex-col gap-6 rounded-sm bg-helpo-light-gray p-8 sm:flex-row sm:items-center md:gap-10 md:p-10">
+						<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white text-[#c9a21c]">
 							{@html icons[i % icons.length]}
 						</div>
 						<div class="flex-1">

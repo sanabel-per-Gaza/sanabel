@@ -38,7 +38,7 @@
 	</div>
 </section>
 
-<section class="bg-helpo-light-gray py-20 lg:py-28">
+<section class="pb-20 lg:pb-28">
 	<div class="container">
 		<div class="mx-auto max-w-3xl">
 			<h2 class="mb-6 text-3xl leading-tight md:text-4xl">{c.gaza_section2_title}</h2>
@@ -53,8 +53,8 @@
 			<h2 class="mb-12 text-center text-3xl md:text-4xl">{c.gaza_focus_title}</h2>
 			<div class="grid gap-6 md:grid-cols-3">
 				{#each c.gaza_focus as focus, i}
-					<article class="border-t-4 border-helpo-yellow bg-white p-8 shadow-[0_10px_40px_-12px_rgba(52,56,119,0.25)]">
-						<div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-helpo-purple/8 text-helpo-purple">
+					<article class="border-t-4 border-helpo-yellow bg-helpo-light-gray p-8">
+						<div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-helpo-purple">
 							{@html icons[i % icons.length]}
 						</div>
 						<h3 class="mb-3 text-xl">{focus.title}</h3>

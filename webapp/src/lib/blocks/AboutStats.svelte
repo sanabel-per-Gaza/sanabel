@@ -13,11 +13,10 @@
 	];
 </script>
 
-<section id="chi-siamo" class="bg-helpo-light-gray py-20 lg:py-28">
+<section id="chi-siamo" class="py-20 lg:py-28">
 	<div class="container">
 		<div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
 			<div class="lg:sticky lg:top-32 lg:self-start">
-				<p class="eyebrow mb-4">{content.about_eyebrow}</p>
 				<h2 class="max-w-xl text-4xl leading-tight md:text-5xl">{content.about_title}</h2>
 				<img
 					class="mt-8 aspect-[4/3] w-full max-w-xl rounded-sm object-cover shadow-sm"
@@ -32,7 +31,7 @@
 			</div>
 
 			<div class="space-y-10">
-				<div class="rich-text rounded-sm bg-white p-6 shadow-sm md:p-10">
+				<div class="rich-text rounded-sm bg-helpo-light-gray p-6 md:p-10">
 					{@html content.about_body}
 				</div>
 
@@ -41,7 +40,7 @@
 						<h3 class="eyebrow">{content.about_clusters_title}</h3>
 						<div class="mt-6 grid gap-5 md:grid-cols-3">
 							{#each content.about_clusters as cluster, i}
-								<article class="flex flex-col border border-helpo-purple/10 bg-white/80 p-6">
+								<article class="flex flex-col bg-helpo-light-gray p-6">
 									<div class="mb-3 text-helpo-purple opacity-70">{@html icons[i % icons.length]}</div>
 									<h4 class="text-sm font-bold uppercase tracking-[0.14em] text-helpo-purple">{cluster.title}</h4>
 									<ul class="mt-3 space-y-3">

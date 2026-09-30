@@ -19,10 +19,10 @@
 	{/if}
 </PageHero>
 
-<section class="bg-helpo-light-gray pb-20 lg:pb-28">
+<section class="pb-20 lg:pb-28">
 	<div class="container">
 		{#if data.activities.length === 0}
-			<div class="rounded-sm bg-white p-12 text-center shadow-sm">
+			<div class="rounded-sm bg-helpo-light-gray p-12 text-center">
 				<p class="text-lg font-bold text-helpo-heading">Nessuna attività pubblicata</p>
 				<p class="mt-2">Torna presto per scoprire le nostre attività.</p>
 			</div>
@@ -30,8 +30,8 @@
 			<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 				{#each data.activities as activity}
 					{@const img = imageUrl(activity, 'image', '800x0')}
-					<article class="group relative flex flex-col overflow-hidden rounded-sm bg-white shadow-sm transition-shadow hover:shadow-lg">
-						<div class="aspect-[16/10] overflow-hidden bg-helpo-purple/5">
+					<article class="group relative flex flex-col overflow-hidden rounded-sm bg-helpo-light-gray transition-shadow hover:shadow-lg">
+						<div class="aspect-[16/10] overflow-hidden bg-helpo-purple/8">
 							{#if img}
 								<img src={img} alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
 							{:else}

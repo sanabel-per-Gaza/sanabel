@@ -22,7 +22,7 @@
 		</div>
 	</section>
 {:else}
-	<section class="bg-helpo-light-gray pt-20 pb-14 lg:pt-28 lg:pb-16">
+	<section class="pt-20 pb-14 lg:pt-28 lg:pb-16">
 		<div class="container text-center">
 			{#if eyebrow}<p class="eyebrow mb-4">{eyebrow}</p>{/if}
 			<h1 class="mx-auto max-w-4xl text-4xl leading-tight md:text-5xl">{title}</h1>

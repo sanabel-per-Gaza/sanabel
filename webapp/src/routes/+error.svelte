@@ -8,7 +8,7 @@
 	<title>Pagina non trovata — Sanabel</title>
 </svelte:head>
 
-<section class="bg-helpo-light-gray py-24 lg:py-32">
+<section class="py-24 lg:py-32">
 	<div class="container flex max-w-2xl flex-col items-center text-center">
 		<GrainMark />
 		<p class="eyebrow mt-8">Errore {$page.status}</p>

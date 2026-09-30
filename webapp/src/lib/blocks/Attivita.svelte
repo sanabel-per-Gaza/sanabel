@@ -9,7 +9,7 @@
 	export let activities: RecordModel[] = [];
 </script>
 
-<section id="attivita" class="py-20 lg:py-28">
+<section id="attivita" class="pb-20 pt-8 lg:pb-28 lg:pt-12">
 	<div class="container">
 		<div class="mx-auto mb-16 max-w-3xl text-center">
 			<h2 class="text-4xl leading-tight md:text-5xl">{content.activities_title}</h2>
@@ -31,7 +31,7 @@
 				{#each activities as activity}
 					{@const img = imageUrl(activity, 'image', '600x0')}
 					<article
-						class="group relative grid overflow-hidden rounded-sm bg-white shadow-[0_10px_40px_-12px_rgba(52,56,119,0.25)] {img
+						class="group relative grid overflow-hidden rounded-sm bg-helpo-light-gray {img
 							? 'md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]'
 							: ''}"
 					>

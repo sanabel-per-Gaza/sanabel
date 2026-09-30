@@ -25,7 +25,6 @@ export type SiteContent = {
 	hero_image: string;
 
 	// Home — chi siamo
-	about_eyebrow: string;
 	about_title: string;
 	about_image: string;
 	about_caption: string;
@@ -120,7 +119,6 @@ export const defaults: SiteContent = {
 	hero_button_label: 'Scopri Sanabel',
 	hero_image: '/hero-image.jpeg',
 
-	about_eyebrow: 'Chi siamo',
 	about_title: 'Sanabel: seminiamo umanità',
 	about_image: '/abbraccio_spalle.jpeg',
 	about_caption:
@@ -132,7 +130,7 @@ export const defaults: SiteContent = {
 <p>Dopo oltre due anni di ininterrotta violenza, da quel lato del mare le condizioni di vita sono diventate insostenibili e letali, segnate da un'esasperazione sistematica della brutalità e della privazione nel pieno di un contesto genocidario.</p>
 <p>Le reti di supporto sono frammentate e i bambini e le bambine autistici e autistiche hanno perso ogni sicurezza.</p>
 <p><strong>Per questo, Sanabel lavora sull'emergenza ma con uno sguardo teso verso il futuro.</strong></p>`,
-	about_clusters_title: 'Cosa facciamo',
+	about_clusters_title: 'costruiamo futuro',
 	about_clusters: [
 		{
 			title: 'Bisogni immediati',

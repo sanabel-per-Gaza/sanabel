@@ -9,7 +9,7 @@
 </script>
 
 {#if posts.length}
-	<section class="bg-helpo-light-gray py-20 lg:py-28">
+	<section class="py-20 lg:py-28">
 		<div class="container">
 			<div class="mb-14 text-center">
 				<p class="eyebrow mb-4">{content.blog_eyebrow}</p>

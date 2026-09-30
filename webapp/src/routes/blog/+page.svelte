@@ -13,10 +13,10 @@
 
 <PageHero eyebrow={c.blog_eyebrow} title={c.blog_title} />
 
-<section class="bg-helpo-light-gray pb-20 lg:pb-28">
+<section class="pb-20 lg:pb-28">
 	<div class="container">
 		{#if data.posts.length === 0}
-			<div class="rounded-sm bg-white p-12 text-center shadow-sm">
+			<div class="rounded-sm bg-helpo-light-gray p-12 text-center">
 				<p class="text-lg font-bold text-helpo-heading">Nessun articolo</p>
 				<p class="mt-2">Torna presto per leggere i nostri aggiornamenti.</p>
 			</div>

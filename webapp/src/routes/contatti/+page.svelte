@@ -41,7 +41,7 @@
 	<p class="mx-auto mt-6 max-w-2xl text-lg leading-8">{c.contact_intro}</p>
 </PageHero>
 
-<section class="bg-helpo-light-gray pb-20 lg:pb-28">
+<section class="pb-20 lg:pb-28">
 	<div class="container">
 		<div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
 			<aside class="self-start rounded-sm bg-helpo-purple p-8 text-white/85 md:p-10">
@@ -66,7 +66,7 @@
 				</div>
 			</aside>
 
-			<div class="rounded-sm bg-white p-8 shadow-sm md:p-10">
+			<div class="rounded-sm bg-helpo-light-gray p-8 md:p-10">
 				{#if status === 'sent'}
 					<div class="flex h-full flex-col items-start justify-center py-10" role="status">
 						<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-helpo-yellow/20 text-helpo-purple">
