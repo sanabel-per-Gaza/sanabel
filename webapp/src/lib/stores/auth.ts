@@ -1,45 +1,44 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
+import PocketBase from 'pocketbase';
 
-let pb: any = null;
-
-async function getPb() {
-	if (!browser) return null;
-	if (!pb) {
-		const PocketBase = (await import('pocketbase')).default;
-		pb = new PocketBase(import.meta.env.VITE_PB_URL);
-	}
-	return pb;
-}
+// Client dedicato al pannello: la sessione è salvata nel localStorage del browser
+const pb = browser ? new PocketBase(import.meta.env.VITE_PB_URL) : null;
 
 function createAuthStore() {
-	const { subscribe, set } = writable(false);
-
-	if (browser) {
-		getPb().then(p => {
-			if (p) {
-				set(p.authStore.isValid);
-				p.authStore.onChange(() => set(p.authStore.isValid));
-			}
-		});
-	}
+	const { subscribe, set } = writable(pb?.authStore.isValid ?? false);
+	pb?.authStore.onChange(() => set(pb.authStore.isValid));
 
 	return {
 		subscribe,
-		get isValid() { return pb?.authStore?.isValid ?? false; },
-		get user() { return pb?.authStore?.model ?? null; },
+		get isValid() {
+			return pb?.authStore.isValid ?? false;
+		},
+		get user() {
+			return pb?.authStore.record ?? null;
+		},
 		login: async (email: string, password: string) => {
-			const p = await getPb();
-			return p!.collection('users').authWithPassword(email, password);
+			return pb!.collection('users').authWithPassword(email, password);
 		},
 		logout: () => {
-			pb?.authStore?.clear();
+			pb?.authStore.clear();
 		}
 	};
 }
 
 export const auth = createAuthStore();
 
+let lastRefresh = 0;
+
 export async function getAdminClient() {
-	return getPb();
+	if (pb?.authStore.isValid && Date.now() - lastRefresh > 10 * 60 * 1000) {
+		lastRefresh = Date.now();
+		// rinnova il token se sta per scadere; se non è più valido si torna al login
+		try {
+			await pb.collection('users').authRefresh({ requestKey: null });
+		} catch {
+			pb.authStore.clear();
+		}
+	}
+	return pb;
 }

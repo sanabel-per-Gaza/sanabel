@@ -1,10 +1,6 @@
-import type { PageLoad } from './$types';
-import pb from '$lib/pocketbase';
+import { redirect } from '@sveltejs/kit';
 
-export const load: PageLoad = async () => {
-	const projects = await pb.collection('sanabel_projects').getFullList({
-		filter: 'published = true',
-		sort: '-created'
-	});
-	return { projects };
+// Vecchio indirizzo: la sezione ora si chiama "Cosa facciamo" (/attivita)
+export const load = () => {
+	redirect(301, '/attivita');
 };

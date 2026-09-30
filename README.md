@@ -72,3 +72,13 @@ Oppure, puoi avviarli manualmente in due terminali separati:
 ---
 
 Grazie per il tuo contributo! ❤️
+
+## ✏️ Gestione dei contenuti (pannello /admin)
+
+Tutti i testi e le foto del sito si modificano da **/admin** (login con un utente della collection `users`):
+
+- **Testi e immagini** (`/admin/contenuti`): Home, Chi siamo, Cosa facciamo, Gaza, Contatti, Privacy, footer, IBAN/PayPal e link "Dona ora". I valori stanno nel record singleton della collection `sanabel_content`; i campi vuoti ricadono sui testi predefiniti in `webapp/src/lib/content/defaults.ts`.
+- **Blog** (`/admin/blog`) e **Attività** (`/admin/attivita`, collection `sanabel_projects`), con editor di testo formattato.
+- **Messaggi ricevuti** (`/admin/messaggi`): le richieste del modulo `/contatti` (collection `sanabel_messages`).
+
+Schema delle collection e passi di migrazione: [`pb_schema/README.md`](pb_schema/README.md).

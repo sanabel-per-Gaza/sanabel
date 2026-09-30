@@ -1,16 +1,14 @@
-<!-- src/lib/components/ui/Logo.svelte -->
 <script lang="ts">
-  export let href = '/';
-  export let theme: 'light' | 'dark' = 'light'; 
-
-  const themes = {
-    light: '/logo-sanabel.jpeg',
-    dark: '/logo-sanabel.jpeg'
-  };
+	export let href = '/';
+	export let size: 'md' | 'lg' = 'md';
 </script>
 
-<div class="header-logo">
-  <a class="header-logo__link" {href}>
-    <img class="h-16" src={themes[theme]} alt="Sanabel Logo" />
-  </a>
-</div>
+<a {href} class="inline-block shrink-0" aria-label="Sanabel — torna alla home">
+	<img
+		class={size === 'lg' ? 'h-20 w-20' : 'h-16 w-16'}
+		src="/logo-sanabel.jpeg"
+		alt="Logo Sanabel"
+		width="80"
+		height="80"
+	/>
+</a>

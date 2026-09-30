@@ -1,12 +1,5 @@
-import type { PageLoad } from './$types';
-import pb from '$lib/pocketbase';
-import { error } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 
-export const load: PageLoad = async ({ params }) => {
-	try {
-		const project = await pb.collection('sanabel_projects').getFirstListItem(`slug = "${params.slug}"`);
-		return { project };
-	} catch {
-		throw error(404, 'Progetto non trovato');
-	}
+export const load = ({ params }) => {
+	redirect(301, `/attivita/${params.slug}`);
 };

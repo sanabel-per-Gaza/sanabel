@@ -1,10 +1,10 @@
 import type { PageLoad } from './$types';
-import pb from '$lib/pocketbase';
+import { getActivities, getPosts, safe } from '$lib/data';
 
-export const load: PageLoad = async () => {
-	const posts = await pb.collection('sanabel_posts').getList(1, 3, {
-		filter: 'published = true',
-		sort: '-created'
-	});
-	return { posts: posts.items };
+export const load: PageLoad = async ({ fetch }) => {
+	const [posts, activities] = await Promise.all([
+		safe(getPosts(fetch, 3), []),
+		safe(getActivities(fetch), [])
+	]);
+	return { posts, activities };
 };

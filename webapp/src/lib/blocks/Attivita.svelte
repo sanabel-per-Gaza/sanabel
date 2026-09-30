@@ -1,126 +1,85 @@
 <script lang="ts">
+	import type { RecordModel } from 'pocketbase';
 	import Button from '$lib/components/ui/Button.svelte';
-	import { donationUrl } from '$lib/links';
-	import pb from '$lib/pocketbase';
-	import { onMount } from 'svelte';
+	import StatusBadge from '$lib/components/ui/StatusBadge.svelte';
+	import { imageUrl } from '$lib/data';
+	import type { SiteContent } from '$lib/content';
 
-	const STATUS_COLORS: Record<string, string> = {
-		'In corso': '#2EC774',
-		'Sospeso': '#F36F8F',
-		'Raggiunto': '#49C2DF'
-	};
-
-	let projects: any[] = [];
-	let loading = true;
-
-	onMount(async () => {
-		try {
-			projects = await pb.collection('sanabel_projects').getFullList({
-				filter: 'published = true',
-				sort: '-created'
-			});
-		} catch (e) {
-			console.error(e);
-		} finally {
-			loading = false;
-		}
-	});
+	export let content: SiteContent;
+	export let activities: RecordModel[] = [];
 </script>
 
-<section id="attivita" class="section py-20 lg:py-28">
-	<div class="container mx-auto">
-		<div class="text-center mb-16">
-			<!-- <p class="mb-4 text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple">Attività</p> -->
-			<h2 class="text-4xl font-bold leading-tight text-helpo-heading md:text-5xl">
-				I nostri progetti
-			</h2>
-			<p class="mt-6 max-w-3xl mx-auto text-lg leading-8 text-helpo-gray-text">
-				Sanabel vive attraverso una rete di solidarietà diffusa di persone, gruppi e realtà coinvolte in
-				diverse città italiane. In questi territori nascono iniziative, incontri e attività di sensibilizzazione che
-				contribuiscono a sostenere il progetto e a costruire legami concreti di solidarietà con Gaza.
-				Di seguito le nostre principali attività.
-			</p>
-			<h2 class="mt-6 text-2xl font-bold leading-tight text-helpo-heading md:text-3xl">
-				Vivi con noi ogni nuovo progetto.
-			</h2>
+<section id="attivita" class="py-20 lg:py-28">
+	<div class="container">
+		<div class="mx-auto mb-16 max-w-3xl text-center">
+			<h2 class="text-4xl leading-tight md:text-5xl">{content.activities_title}</h2>
+			<p class="mt-6 text-lg leading-8 whitespace-pre-line">{content.activities_intro}</p>
+			{#if content.activities_subtitle}
+				<p class="mt-6 text-2xl font-bold leading-tight text-helpo-heading md:text-3xl">
+					{content.activities_subtitle}
+				</p>
+			{/if}
 		</div>
 
-		{#if loading}
-			<div class="space-y-6">
-				{#each Array(3) as _}
-					<div class="rounded-sm bg-white shadow-lg overflow-hidden animate-pulse">
-						<div class="p-6 md:p-8 lg:p-10">
-							<div class="h-6 w-24 bg-helpo-purple/10 rounded mb-5"></div>
-							<div class="h-8 w-3/4 bg-helpo-purple/5 rounded mb-4"></div>
-							<div class="space-y-2">
-								<div class="h-4 w-full bg-helpo-purple/5 rounded"></div>
-								<div class="h-4 w-5/6 bg-helpo-purple/5 rounded"></div>
-							</div>
-						</div>
-					</div>
-				{/each}
-			</div>
-		{:else if projects.length === 0}
-			<div class="rounded-sm bg-white/70 p-12 text-center shadow-sm">
+		{#if activities.length === 0}
+			<div class="rounded-sm bg-helpo-light-gray p-12 text-center">
 				<p class="text-lg font-bold text-helpo-heading">Nessuna attività in evidenza</p>
-				<p class="mt-2 text-helpo-gray-text">Torna presto per scoprire le nostre attività.</p>
+				<p class="mt-2">Torna presto per scoprire le nostre attività.</p>
 			</div>
 		{:else}
-			<div class="space-y-10">
-				{#each projects as project}
-					<article class="rounded-sm bg-white shadow-lg overflow-hidden">
+			<div class="space-y-8">
+				{#each activities as activity}
+					{@const img = imageUrl(activity, 'image', '600x0')}
+					<article
+						class="group relative grid overflow-hidden rounded-sm bg-white shadow-[0_10px_40px_-12px_rgba(52,56,119,0.25)] {img
+							? 'md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]'
+							: ''}"
+					>
+						{#if img}
+							<div class="aspect-[16/10] overflow-hidden md:aspect-auto">
+								<img src={img} alt="" class="h-full w-full object-cover" loading="lazy" />
+							</div>
+						{/if}
 						<div class="p-6 md:p-8 lg:p-10">
-							<div class="flex flex-wrap items-center gap-4 mb-5">
-								{#if project.status}
-									<span
-										class="inline-block text-white text-sm font-bold py-1 px-4 rounded"
-										style="background-color: {STATUS_COLORS[project.status] || '#777'};"
-									>
-										{project.status}
-									</span>
-								{/if}
-								{#if project.period}
-									<span class="text-sm text-helpo-gray-text">Periodo: {project.period}</span>
+							<div class="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+								{#if activity.status}<StatusBadge status={activity.status} />{/if}
+								{#if activity.period}
+									<span class="text-sm">Periodo: {activity.period}</span>
 								{/if}
 							</div>
-							<h3 class="text-2xl font-bold text-helpo-heading mb-4">
-								{#if project.slug}
-									<a href="/progetti/{project.slug}" class="no-underline hover:text-helpo-purple transition-colors">
-										{project.title}
-									</a>
-								{:else}
-									{project.title}
-								{/if}
+							<h3 class="mb-4 text-2xl">
+								<a
+									href="/attivita/{activity.slug}"
+									class="no-underline transition-colors after:absolute after:inset-0 group-hover:text-helpo-purple"
+								>
+									{activity.title}
+								</a>
 							</h3>
-							<div class="max-w-3xl">
-								<div class="text-base leading-7 text-helpo-gray-text">
-									{#if project.excerpt}
-										<p>{project.excerpt}</p>
-									{:else if project.content}
-										{@html project.content}
+							{#if activity.excerpt}
+								<p class="max-w-3xl text-base leading-7">{activity.excerpt}</p>
+							{/if}
+							{#if activity.goal || activity.donated}
+								<dl class="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+									{#if activity.goal}
+										<div class="flex gap-1.5"><dt class="font-bold text-helpo-heading">Obiettivo:</dt><dd>{activity.goal}</dd></div>
 									{/if}
-								</div>
-							</div>
-							<div class="mt-6 flex flex-wrap gap-6 text-sm">
-								{#if project.goal}
-									<div class="text-helpo-gray-text">
-										<span class="font-bold text-helpo-heading">Obiettivo:&nbsp;</span>{project.goal}
-									</div>
-								{/if}
-								{#if project.donated}
-									<div class="text-helpo-gray-text">
-										<span class="font-bold text-helpo-heading">Donato:&nbsp;</span>{project.donated}
-									</div>
-								{/if}
-							</div>
+									{#if activity.donated}
+										<div class="flex gap-1.5"><dt class="font-bold text-helpo-heading">Donato:</dt><dd>{activity.donated}</dd></div>
+									{/if}
+								</dl>
+							{/if}
+							<p class="mt-6 text-xs font-bold uppercase tracking-wider text-helpo-purple">
+								Scopri l'attività <span aria-hidden="true" class="inline-block transition-transform group-hover:translate-x-1">›</span>
+							</p>
 						</div>
 					</article>
 				{/each}
 			</div>
 		{/if}
 
-		<div class="mt-12 text-center">
-			<Button variant="reverted" href={donationUrl} target="_blank">Sostieni il progetto</Button>
+		<div class="mt-14 flex flex-col items-center justify-center gap-4 sm:flex-row">
+			<Button variant="filled" href={content.donation_url} target="_blank">Sostieni Sanabel</Button>
+			<Button variant="reverted" href="/attivita">Tutte le attività</Button>
 		</div>
 	</div>
 </section>

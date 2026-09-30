@@ -1,25 +1,33 @@
-<!-- src/lib/components/ui/Button.svelte -->
-<script>
-  export let href = '#';
-  export let target = undefined;
-  export let rel = undefined;
-  /** @type {'primary' | 'filled' | 'squared' | 'reverted'} */
-  export let variant = 'primary';
+<script lang="ts">
+	export let href: string | undefined = undefined;
+	export let target: string | undefined = undefined;
+	export let rel: string | undefined = undefined;
+	export let type: 'button' | 'submit' = 'button';
+	export let disabled = false;
+	export let variant: 'primary' | 'filled' | 'squared' | 'reverted' = 'primary';
 
-  $: safeRel = rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined);
+	$: safeRel = rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined);
 
-  const baseClasses = 'inline-block text-xs font-bold uppercase text-center py-4 px-10 rounded-full min-w-[160px] tracking-wider transition-all duration-300 no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-helpo-yellow';
-  
-  const variantClasses = {
-    primary: 'text-white border-2 border-helpo-yellow hover:bg-helpo-yellow hover:text-helpo-heading',
-    reverted:  'border-2 border-helpo-yellow text-helpo-heading hover:bg-helpo-yellow',
-    filled: 'bg-helpo-yellow text-helpo-heading border-2 border-helpo-yellow hover:bg-yellow-500',
-    squared: 'bg-helpo-yellow text-helpo-purple rounded-none h-full flex items-center justify-center hover:bg-yellow-300 py-8 font-bold'
-  };
+	const base =
+		'inline-flex items-center justify-center text-xs font-bold uppercase text-center tracking-wider no-underline transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-60';
+
+	const variants = {
+		primary:
+			'min-w-[160px] rounded-full px-10 py-4 text-white border-2 border-helpo-yellow hover:bg-helpo-yellow hover:text-helpo-heading',
+		reverted:
+			'min-w-[160px] rounded-full px-10 py-4 border-2 border-helpo-yellow text-helpo-heading hover:bg-helpo-yellow',
+		filled:
+			'min-w-[160px] rounded-full px-10 py-4 bg-helpo-yellow text-helpo-heading border-2 border-helpo-yellow hover:bg-[#e2b92a] hover:border-[#e2b92a]',
+		squared: 'h-full min-w-[170px] px-8 bg-helpo-yellow text-helpo-purple hover:bg-[#f4d565]'
+	};
 </script>
 
-<a {href} target={target || undefined} rel={safeRel} class="{baseClasses} {variantClasses[variant]}">
-  <span class={variant === 'squared' ? 'transition-transform duration-300 group-hover:scale-110' : ''}>
-    <slot />
-  </span>
-</a>
+{#if href}
+	<a {href} target={target || undefined} rel={safeRel} class="{base} {variants[variant]}">
+		<slot />
+	</a>
+{:else}
+	<button {type} {disabled} class="{base} {variants[variant]}" on:click>
+		<slot />
+	</button>
+{/if}

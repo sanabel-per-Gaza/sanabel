@@ -1,39 +1,120 @@
-/* Import Tailwind's base, components, and utilities */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-/* Tailwind v4 theme configuration */
 @theme {
   --color-helpo-purple: #343877;
   --color-helpo-yellow: #efc940;
   --color-helpo-light-gray: #f9f7f6;
   --color-helpo-dark: #20212b;
-  --color-helpo-gray-text: #777;
+  --color-helpo-gray-text: #6b6b73;
   --color-helpo-heading: #4a4c70;
-  
-  --font-quicksand: ui-rounded, "Avenir Next", "Nunito Sans", ui-sans-serif, system-ui;
-  --font-storytella: ui-serif, Georgia, serif;
+
+  --font-quicksand: "Avenir Next", "Nunito Sans Variable", ui-rounded, ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Apply the default font to the body */
-html {
-	scroll-behavior: smooth;
-}
-
-body {
-	@apply font-quicksand text-helpo-gray-text antialiased;
-}
-
-.container {
+@utility container {
   width: min(100% - 2rem, 1180px);
-}
+  margin-inline: auto;
 
-@media (min-width: 768px) {
-  .container {
+  @media (min-width: 768px) {
     width: min(100% - 3rem, 1180px);
   }
 }
 
-/* Apply specific styles for the custom headings */
+@layer base {
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+body {
+  @apply font-quicksand text-helpo-gray-text antialiased;
+  background: #fff;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
-    @apply text-helpo-heading font-bold tracking-tight;
+  @apply text-helpo-heading font-bold tracking-tight;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-helpo-yellow);
+  outline-offset: 3px;
+}
+
+}
+
+@layer components {
+/* Testo ricco proveniente dal pannello (editor) */
+.rich-text {
+  @apply prose prose-lg max-w-none;
+  --tw-prose-body: var(--color-helpo-gray-text);
+  --tw-prose-headings: var(--color-helpo-heading);
+  --tw-prose-bold: var(--color-helpo-heading);
+  --tw-prose-links: var(--color-helpo-purple);
+  --tw-prose-bullets: var(--color-helpo-yellow);
+  --tw-prose-counters: var(--color-helpo-purple);
+  --tw-prose-quote-borders: var(--color-helpo-yellow);
+  --tw-prose-quotes: var(--color-helpo-heading);
+}
+
+.rich-text p {
+  line-height: 1.85;
+}
+
+.rich-text > :first-child {
+  margin-top: 0;
+}
+
+.rich-text > :last-child {
+  margin-bottom: 0;
+}
+
+.rich-text a {
+  text-underline-offset: 3px;
+}
+
+.rich-text img {
+  border-radius: 2px;
+}
+
+.rich-text--compact {
+  @apply prose-base;
+}
+
+/* Etichetta sopra ai titoli di sezione */
+.eyebrow {
+  @apply text-sm font-bold uppercase tracking-[0.26em] text-helpo-purple;
+}
+
+/* Campi dei form pubblici e del pannello */
+.field-label {
+  @apply mb-1.5 block text-sm font-bold text-helpo-heading;
+}
+
+.field-input {
+  @apply w-full border border-helpo-purple/20 bg-white px-4 py-3 text-sm text-helpo-heading transition-colors;
+}
+
+.field-input:focus {
+  @apply border-helpo-purple outline-none;
+  box-shadow: 0 0 0 3px rgb(52 56 119 / 0.12);
+}
+
+.field-hint {
+  @apply mt-1 text-xs text-helpo-gray-text;
+}
 }
